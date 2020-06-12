@@ -5,7 +5,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <h1 className="App__title">Nouvelle Application</h1>
+      <h1 className="App__title">Blockchain</h1>
     </div>
   );
 }
