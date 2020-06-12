@@ -4,22 +4,22 @@ Ce projet est un web documentaire sur le thême de la blockchain.
 
 ## Les choix techniques
 
-* Front-end :
-  React.js
-  SCSS
-  Librairies : I18N, GSAP
-  Client Side Rendering
-  Desktop First
-  High Tech
-  Webpack (npm, babel)
-  Responsive (Desktop, tablette, mobile)
+#### Front-end :
+  <li>React.js</li>
+  <li>SCSS</li>
+  <li>Librairies : I18N, GSAP</li>
+  <li>Client Side Rendering</li>
+  <li>Desktop First</li>
+  <li>High Tech</li>
+  <li>Webpack (npm, babel)</li>
+  <li>Responsive (Desktop, tablette, mobile)</li>
 
-* Back-end :
-  Symfony
-  Base de données relationnel
+#### Back-end :
+  <li>Symfony</li>
+  <li>Base de données relationnel</li>
 
-* Features :
-  PWA en hors connexion
+#### Features :
+  <li>PWA en hors connexion</li>
 
 ### Installation
 
