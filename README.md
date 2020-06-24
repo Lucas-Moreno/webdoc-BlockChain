@@ -13,11 +13,12 @@ www.site-blockchain.fr
   <li>Webpack (NPM, Babel, SCSS)</li>
   <li>Desktop First</li>
   <li>Responsive (Desktop, Tablet, Mobile)</li>
-  ##### NPM PACKAGES
-    <li>gsap animation</li>
-    <li>intersection-observer</li>
-    <li>countup.js</li>
-    <li>slick.js</li>
+
+#### NPM PACKAGES
+  <li>gsap animation</li>
+  <li>intersection-observer</li>
+  <li>countup.js</li>
+  <li>slick.js</li>
 
 #### BACK-END
   <li>Symfony</li>
