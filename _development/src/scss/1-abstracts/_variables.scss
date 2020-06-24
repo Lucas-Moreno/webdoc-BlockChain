@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/* Regular font family */
+$main-font-stack: 'Open Sans', sans-serif;
+$main-line-height: normal;
+
+/* Code (monospace) font family */
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+  'Monaco', monospace;
+
+/* Colors */
+:root {
+  // Basics colors
+  --white-color: rgb(255, 255, 255);
+  --black-color: rgb(0, 0, 0);
+}
+
+/* Breakpoints */
+$xx-small-max: max-width ((420 / 16) * 1em);
+$x-small-max: max-width ((575 / 16) * 1em);
+$small-min: ((576 / 16) * 1em);
+$small-max: max-width ((767 / 16) * 1em);
+$medium-min: ((768 / 16) * 1em);
+$medium-max: max-width ((991 / 16) * 1em);
+$large-min: ((992 / 16) * 1em);
+$large-max: max-width ((1199 / 16) * 1em);
+$x-large-min: ((1200 / 16) * 1em);
+
+/* Container */
+$container-max-width: 1160px;
+
+/* Display Grid */
+$main-gap: 15px;
+
+/// Relative or absolute URL where all assets are served from
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

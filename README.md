@@ -1,48 +1,60 @@
-# WEB DOCUMENTAIRE : BLOCKCHAIN
+# WEB-DOCUMENTAIRE : LA BLOCKCHAIN
 
-Ce projet est un web documentaire sur le thême de la blockchain. 
+Ce projet est un Web-documentaire.
+Découvrez une nouvelle technologie innovante, la Blockchain.
 
-## Les choix techniques
+www.site-blockchain.fr
 
-#### Front-end :
+## STACK
+
+#### FRONT-END
   <li>React.js</li>
-  <li>SCSS</li>
-  <li>Librairies : I18N, GSAP</li>
   <li>Client Side Rendering</li>
+  <li>Webpack (NPM, Babel, SCSS)</li>
   <li>Desktop First</li>
-  <li>High Tech</li>
-  <li>Webpack (npm, babel)</li>
-  <li>Responsive (Desktop, tablette, mobile)</li>
+  <li>Responsive (Desktop, Tablet, Mobile)</li>
+  ##### NPM PACKAGES
+    <li>gsap animation</li>
+    <li>intersection-observer</li>
+    <li>countup.js</li>
+    <li>slick.js</li>
 
-#### Back-end :
+#### BACK-END
   <li>Symfony</li>
   <li>Base de données relationnel</li>
 
-#### Features :
-  <li>PWA en hors connexion</li>
+#### FEATURES
+  <li>Contenus en FRANCAIS/ANGLAIS</li>
+  <li>PWA - Offline</li>
 
-### Installation
+### INSTALLATION
 
-npm install
+À la racine du fichier -> npm install
 
-## Démarrage
+#### Lancement du server-react
 
-npm start
+À la racine du fichier -> npm start
+
+### WEBPACK BUILD
+
+cd _development -> npm install
+npm run watch (DEV)
+npm run build (PROD)
 
 ## Fabriqué avec
 
 Les technologies utilisés pour développer le projet
 
-* [React.js](https://fr.reactjs.org/) - (front-end)
-* [Symfony](https://symfony.com/) - (back-end)
+* [React.js](https://fr.reactjs.org/) - (FRONT-END)
+* [Symfony](https://symfony.com/) - (BACK-END)
 
-* [VS Code](https://code.visualstudio.com/) - Editeur de textes
-* [PhpStorm](https://www.jetbrains.com/fr-fr/phpstorm/) - Editeur de textes
+* [VS Code](https://code.visualstudio.com/) - IDE Multi Languages
+* [PhpStorm](https://www.jetbrains.com/fr-fr/phpstorm/) - IDE PHP
 
 
-## Auteurs
+## AUTEURS
 
-Les auteurs du projet ici !
+Les Auteurs du projet ici !
 
 * **Lucas Moreno** [@Lucas-Moreno](https://github.com/Lucas-Moreno)
 * **Lucas Cunault** [@Lucas-Cunault](https://github.com/Lcunault)
