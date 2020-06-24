@@ -21,7 +21,7 @@ Ce projet est un web documentaire sur le thême de la blockchain.
 #### Features :
   <li>PWA en hors connexion</li>
 
-### Installation
+## Installation
 
 npm install
 
