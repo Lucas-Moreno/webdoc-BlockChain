@@ -10,7 +10,7 @@ www.site-blockchain.fr
 #### FRONT-END
   <li>React.js</li>
   <li>Client Side Rendering</li>
-  <li>Webpack (NPM, Babel, SCSS)</li>
+  <li>Webpack (NPM, Babel, SCSS, Prettier, ESlint)</li>
   <li>Desktop First</li>
   <li>Responsive (Desktop, Tablet, Mobile)</li>
 
@@ -36,11 +36,9 @@ www.site-blockchain.fr
 
 À la racine du fichier -> npm start
 
-### WEBPACK BUILD
+### Passage en PRODUCTION
 
-cd _development -> npm install
-npm run watch (DEV)
-npm run build (PROD)
+npm run build
 
 ## Fabriqué avec
 
