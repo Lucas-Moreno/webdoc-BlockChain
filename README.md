@@ -15,11 +15,12 @@ www.site-blockchain.fr
   <li>Responsive (Desktop, Tablet, Mobile)</li>
 
 #### NPM PACKAGES
-  <li>node-sass</li>
-  <li>breakpoint-sass</li>
-  <li>gsap animation</li>
-  <li>intersection-observer</li>
-  <li>countup.js</li>
+  <li>node-sass (https://www.npmjs.com/package/node-sass?activeTab=versions)</li>
+  <li>breakpoint-sass (http://breakpoint-sass.com/)</li>
+  <li>gsap animation (https://greensock.com/gsap/)</li>
+  <li>intersection-observer (https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API)</li>
+  <li>countup.js (https://inorganik.github.io/countUp.js/)</li>
+  <li>React Slick (https://react-slick.neostack.com/)</li>
 
 #### BACK-END
   <li>Symfony</li>

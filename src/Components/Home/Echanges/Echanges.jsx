@@ -3,7 +3,6 @@ import React from "react";
 const Echanges = () => {
   return (
     <div className="slide">
-      <h1 className="slide__title">BlockChain</h1>
       <h2 className="slide__subtitle">Échanges</h2>
       <p className="slide__text">
         il est temps d'identifier et de hiérarchiser les différents domaines
