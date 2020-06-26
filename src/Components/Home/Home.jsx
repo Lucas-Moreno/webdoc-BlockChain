@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import React from "react";
+import Cryptomonnaies from "./Cryptomonnaies/Cryptomonnaies";
+import Echanges from "./Echanges/Echanges";
+import Revolutions from "./Revolution/Revolution";
+import Technologies from "./Technologie/Technologie";
+
+const Home = () => {
+  return (
+    <div className="wrapper wrapper--home">
+      <div className="container">
+        <div className="contents">
+          <div className="carousel">
+            <Cryptomonnaies />
+            <Echanges />
+            <Revolutions />
+            <Technologies />
+=======
 import React from 'react';
 import Header from '../Header/Header';
 import Cryptomonnaies from './Cryptomonnaies/Cryptomonnaies';
@@ -32,7 +50,9 @@ const Home = () => {
               </Slider>
             </div>
             <div className="illustration">ILLUSTRATION CSS</div>
+>>>>>>> f640a47d9bf00e5102e781df43079a51880b4bd4
           </div>
+          <div className="illustration"></div>
         </div>
       </div>
     </div>

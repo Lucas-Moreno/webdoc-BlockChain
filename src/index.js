@@ -4,6 +4,7 @@ import "./Assets/scss/style.scss";
 import Home from "./Components/Home/Home";
 import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
+import Apropos from "./Components/Apropos/Apropos";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -14,6 +15,7 @@ const Root = () => (
     <Switch>
       <Route exact path="/" component={Home}></Route>
       <Route exact path="/app" component={App}></Route>
+      <Route exact path="/apropos" component={Apropos}></Route>
       <Route component={NotFound}></Route>
     </Switch>
   </BrowserRouter>

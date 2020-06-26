@@ -1,0 +1,12 @@
+.container_button {
+  display: flex;
+  width: 60vw;
+  justify-content: space-between;
+}
+.button_apropos {
+  border: 3px solid red;
+  cursor: pointer;
+}
+.button_text {
+  text-transform: uppercase;
+}
