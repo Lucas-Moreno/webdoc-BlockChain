@@ -10,7 +10,7 @@ $slide-text-font-sizes: (
   null: 1.125rem /* 18px */,
 );
 
-.wrapper--home {
+.home {
   background-image: url(../../../images/background-home-desktop.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -26,8 +26,11 @@ $slide-text-font-sizes: (
 
 .carousel {
   grid-area: carousel;
+  min-width: 447px;
 
   .slide {
+    cursor: grab;
+
     &__title,
     &__subtitle {
       font-family: $hackney-font-stack;
@@ -51,25 +54,6 @@ $slide-text-font-sizes: (
       font-weight: 500;
       margin-top: 0.625rem; // 10px
     }
-  }
-
-  .bullets {
-    display: flex;
-    flex-direction: row;
-    margin-top: 2.1875rem; // 35px
-  }
-
-  .bullet {
-    display: block;
-    width: 10px !important;
-    height: 10px !important;
-    background-color: v(white-color);
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .bullet:not(:nth-last-of-type(1)) {
-    margin-right: 0.3125rem; // 5px
   }
 }
 

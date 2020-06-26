@@ -1,0 +1,28 @@
+.carousel {
+  .slick-dots {
+    position: relative;
+    bottom: 0;
+    margin-top: 2.1875rem; // 35px
+    text-align: start;
+
+    li {
+      margin: 0;
+    }
+
+    li button::before {
+      font-size: 15px;
+      opacity: 1;
+      color: v(white-color);
+    }
+
+    li.slick-active button::before {
+      opacity: 1;
+      color: v(blue-color);
+    }
+
+    li:hover button::before {
+      opacity: 0.7;
+      color: v(blue-color);
+    }
+  }
+}
