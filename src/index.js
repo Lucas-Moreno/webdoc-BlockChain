@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './Assets/css/index.css';
-import App from './App/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./Assets/css/index.css";
+import Home from "./Components/Home/Home";
+import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
 
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from "./serviceWorker";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const Root = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={App}></Route>
+      <Route exact path="/" component={Home}></Route>
+      <Route exact path="/app" component={App}></Route>
       <Route component={NotFound}></Route>
     </Switch>
   </BrowserRouter>
