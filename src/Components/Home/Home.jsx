@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Home.css';
 import Cryptomonnaies from './Cryptomonnaies/Cryptomonnaies';
 import Echanges from './Echanges/Echanges';
 import Revolutions from './Revolution/Revolution';
@@ -40,17 +39,24 @@ const Home = () => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="wrapper wrapper--home">
       <div className="container">
-        <div className="home">
-          {crypto ? <Cryptomonnaies /> : null}
-          {echange ? <Echanges /> : null}
-          {revo ? <Revolutions /> : null}
-          {techno ? <Technologies /> : null}
-          <button onClick={Crypto}>Crypto</button>
-          <button onClick={Echange}>Echanges</button>
-          <button onClick={Revolution}>Revo</button>
-          <button onClick={Technologie}>Techno</button>
+        <div className="contents">
+          <div className="carousel">
+            {crypto ? <Cryptomonnaies /> : null}
+            {echange ? <Echanges /> : null}
+            {revo ? <Revolutions /> : null}
+            {techno ? <Technologies /> : null}
+            <div className="bullets">
+              <span className="bullet" onClick={Crypto}></span>
+              <span className="bullet" onClick={Echange}></span>
+              <span className="bullet" onClick={Revolution}></span>
+              <span className="bullet" onClick={Technologie}></span>
+            </div>
+          </div>
+          <div className="illustration">
+            
+          </div>
         </div>
       </div>
     </div>

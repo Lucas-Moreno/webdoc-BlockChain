@@ -1,0 +1,78 @@
+$slide-title-font-sizes: (
+  null: 5.75rem /* 92px */,
+);
+
+$slide-subtitle-font-sizes: (
+  null: 3.875rem /* 62px */,
+);
+
+$slide-text-font-sizes: (
+  null: 1.125rem /* 18px */,
+);
+
+.wrapper--home {
+  background-image: url(../../../images/background-home-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 $main-gap;
+  grid-template-areas: 'carousel carousel carousel carousel carousel illustration illustration illustration illustration illustration illustration illustration';
+}
+
+.carousel {
+  grid-area: carousel;
+
+  .slide {
+    &__title,
+    &__subtitle {
+      font-family: $hackney-font-stack;
+    }
+
+    &__title {
+      @include font-size($slide-title-font-sizes);
+      color: v(white-color);
+      text-transform: uppercase;
+    }
+
+    &__subtitle {
+      @include font-size($slide-subtitle-font-sizes);
+      color: v(blue-color);
+      text-transform: uppercase;
+    }
+
+    &__text {
+      @include font-size($slide-text-font-sizes);
+      color: v(white-color);
+      font-weight: 500;
+      margin-top: 0.625rem; // 10px
+    }
+  }
+
+  .bullets {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.1875rem; // 35px
+  }
+
+  .bullet {
+    display: block;
+    width: 10px !important;
+    height: 10px !important;
+    background-color: v(white-color);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .bullet:not(:nth-last-of-type(1)) {
+    margin-right: 0.3125rem; // 5px
+  }
+}
+
+.illustration {
+  grid-area: illustration;
+}
