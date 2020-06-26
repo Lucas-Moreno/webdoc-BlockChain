@@ -19,3 +19,7 @@
 /* Layout */
 // Principal Layout
 @import './layout/layout.scss';
+
+/* Components */
+@import './components/header/header';
+@import './components/home/home';

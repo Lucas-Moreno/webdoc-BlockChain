@@ -1,7 +1,0 @@
-.home {
-  background-color: gold;
-}
-
-@include breakpoint($medium-max) {
-  background-color: red;
-}
