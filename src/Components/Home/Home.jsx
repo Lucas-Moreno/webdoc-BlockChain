@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import Cryptomonnaies from "./Cryptomonnaies/Cryptomonnaies";
-import Echanges from "./Echanges/Echanges";
-import Revolutions from "./Revolution/Revolution";
-import Technologies from "./Technologie/Technologie";
+import React, { useState } from 'react';
+import './Home.css';
+import Cryptomonnaies from './Cryptomonnaies/Cryptomonnaies';
+import Echanges from './Echanges/Echanges';
+import Revolutions from './Revolution/Revolution';
+import Technologies from './Technologie/Technologie';
 
 const Home = () => {
   const [crypto, setCrypto] = useState(true);
@@ -39,15 +40,19 @@ const Home = () => {
   };
 
   return (
-    <div>
-      {crypto ? <Cryptomonnaies /> : null}
-      {echange ? <Echanges /> : null}
-      {revo ? <Revolutions /> : null}
-      {techno ? <Technologies /> : null}
-      <button onClick={Crypto}>Crypto</button>
-      <button onClick={Echange}>Echanges</button>
-      <button onClick={Revolution}>Revo</button>
-      <button onClick={Technologie}>Techno</button>
+    <div className="wrapper">
+      <div className="container">
+        <div className="home">
+          {crypto ? <Cryptomonnaies /> : null}
+          {echange ? <Echanges /> : null}
+          {revo ? <Revolutions /> : null}
+          {techno ? <Technologies /> : null}
+          <button onClick={Crypto}>Crypto</button>
+          <button onClick={Echange}>Echanges</button>
+          <button onClick={Revolution}>Revo</button>
+          <button onClick={Technologie}>Techno</button>
+        </div>
+      </div>
     </div>
   );
 };

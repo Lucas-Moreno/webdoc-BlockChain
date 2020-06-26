@@ -15,10 +15,11 @@ www.site-blockchain.fr
   <li>Responsive (Desktop, Tablet, Mobile)</li>
 
 #### NPM PACKAGES
+  <li>node-sass</li>
+  <li>breakpoint-sass</li>
   <li>gsap animation</li>
   <li>intersection-observer</li>
   <li>countup.js</li>
-  <li>slick.js</li>
 
 #### BACK-END
   <li>Symfony</li>

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./Assets/css/index.css";
+import "./Assets/scss/style.scss";
 import Home from "./Components/Home/Home";
 import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
