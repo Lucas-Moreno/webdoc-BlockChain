@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home";
 import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
 import Apropos from "./Components/Apropos/Apropos";
+import Sommaire from "./Components/Sommaire/Sommaire";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -15,7 +16,7 @@ const Root = () => (
     <Switch>
       <Route exact path="/" component={Home}></Route>
       <Route exact path="/app" component={App}></Route>
-      <Route exact path="/apropos" component={Apropos}></Route>
+      <Route exact path="/sommaire" component={Sommaire}></Route>
       <Route component={NotFound}></Route>
     </Switch>
   </BrowserRouter>
