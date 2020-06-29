@@ -13,8 +13,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 const Root = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Home}></Route>
-      <Route exact path="/app" component={App}></Route>
+      <Route exact path="/" component={App}></Route>
+      <Route exact path="/home" component={Home}></Route>
       <Route exact path="/apropos" component={Apropos}></Route>
       <Route component={NotFound}></Route>
     </Switch>

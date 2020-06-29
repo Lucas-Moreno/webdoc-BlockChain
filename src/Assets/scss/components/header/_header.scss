@@ -1,0 +1,12 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 2.5rem; // 40px
+  z-index: 100;
+
+  &__logo {
+    display: inline-block;
+  }
+}
