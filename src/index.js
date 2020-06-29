@@ -6,6 +6,7 @@ import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
 import Apropos from "./Components/Apropos/Apropos";
 import Sommaire from "./Components/Sommaire/Sommaire";
+import Doc from "./Components/Doc/Doc";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -17,6 +18,8 @@ const Root = () => (
       <Route exact path="/" component={App}></Route>
       <Route exact path="/home" component={Home}></Route>
       <Route exact path="/apropos" component={Apropos}></Route>
+      <Route exact path="/sommaire" component={Sommaire}></Route>
+      <Route exact path="/doc" component={Doc}></Route>
       <Route component={NotFound}></Route>
     </Switch>
   </BrowserRouter>

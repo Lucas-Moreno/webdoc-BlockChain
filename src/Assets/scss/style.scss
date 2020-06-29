@@ -1,31 +1,32 @@
 /* Config */
 // Functions
-@import './config/functions.scss';
+@import "./config/functions.scss";
 // Variables
-@import './config/variables.scss';
+@import "./config/variables.scss";
 // Fonts
-@import './config/fonts.scss';
+@import "./config/fonts.scss";
 // Typography
-@import './config/typography.scss';
+@import "./config/typography.scss";
 
 /* Vendors */
 // Reset CSS
-@import './vendors/reset.scss';
+@import "./vendors/reset.scss";
 // Breakpoint SASS
-@import '~breakpoint-sass/stylesheets/breakpoint';
+@import "~breakpoint-sass/stylesheets/breakpoint";
 // React-Slick
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-@import './vendors/react-slick';
+@import "./vendors/react-slick";
 
 /* Layout */
 // Principal Layout
-@import './layout/layout.scss';
+@import "./layout/layout.scss";
 
 /* Components */
-@import './components/app/app';
-@import './components/header/header';
-@import './components/home/home';
-@import './components/home/animation';
-@import './components/introduction/introduction';
-@import './components/icons/icon-sound';
+@import "./components/app/app";
+@import "./components/header/header";
+@import "./components/home/home";
+@import "./components/home/animation";
+@import "./components/introduction/introduction";
+@import "./components/icons/icon-sound";
+@import "./components/apropos/apropos";

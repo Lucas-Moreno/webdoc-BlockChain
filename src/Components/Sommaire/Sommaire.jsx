@@ -3,9 +3,9 @@ import ChapitreUn from "./ChapterOne/ChapterOne";
 import ChapitreDeux from "./ChapterTwo/ChapterTwo";
 import ChapitreTrois from "./ChapterThree/ChapterThree";
 import ChapitreQuatre from "./ChapterFour/ChapterFour";
-import "../../Assets/scss/components/Apropos/_apropos.scss";
 import Logo from "../../Assets/images/logo.png";
 import BackArrow from "../../Assets/images/back-arrow.png";
+import { Link } from "react-router-dom";
 
 const Apropos = () => {
   const [chapterOne, setChapterOne] = useState(true);
@@ -44,10 +44,12 @@ const Apropos = () => {
     <div>
       <h1>Sommaire</h1>
       <img src={Logo} alt="Logo" />
-      <div>
-        <img src={BackArrow} alt="Flèche droite" />
-        <span>Retour</span>
-      </div>
+      <Link to="/">
+        <div>
+          <img src={BackArrow} alt="Flèche droite" />
+          <span>Retour</span>
+        </div>
+      </Link>
       <div className="container_button">
         <div className="button_apropos" onClick={ChapterOne}>
           <p className="button_text">Chapitre 1</p>
