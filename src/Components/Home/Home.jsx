@@ -1,10 +1,11 @@
-import React from "react";
-import Header from "../Header/Header";
-import Cryptomonnaies from "./Cryptomonnaies/Cryptomonnaies";
-import Echanges from "./Echanges/Echanges";
-import Revolutions from "./Revolution/Revolution";
-import Technologies from "./Technologie/Technologie";
-import Slider from "react-slick";
+import React from 'react';
+import Cryptomonnaies from './Cryptomonnaies/Cryptomonnaies';
+import Echanges from './Echanges/Echanges';
+import Revolutions from './Revolution/Revolution';
+import Technologies from './Technologie/Technologie';
+import Slider from 'react-slick';
+import HomeAnimation from './Animation/Animation.jsx';
+import Scroll from './Scroll/Scroll.jsx';
 
 const Home = () => {
   const settings = {
@@ -17,25 +18,24 @@ const Home = () => {
     adaptiveHeight: true
   };
   return (
-    <div className="home">
-      <Header />
-      <div className="wrapper">
-        <div className="container">
-          <div className="contents">
-            <div className="carousel">
-              <h1 className="slide__title">BlockChain</h1>
-              <Slider {...settings}>
-                <Cryptomonnaies />
-                <Echanges />
-                <Revolutions />
-                <Technologies />
-              </Slider>
-            </div>
-            <div className="illustration">ILLUSTRATION CSS</div>
+    <div className="wrapper wrapper--home">
+      <div className="container">
+        <div className="home">
+          <div className="home__carousel">
+            <h1 className="slide__title">BlockChain</h1>
+            <Slider {...settings}>
+              <Cryptomonnaies />
+              <Echanges />
+              <Revolutions />
+              <Technologies />
+            </Slider>
           </div>
-          <div className="illustration"></div>
+          <div className="home__illustration">
+            <HomeAnimation />
+          </div>
         </div>
       </div>
+      <Scroll />
     </div>
   );
 };

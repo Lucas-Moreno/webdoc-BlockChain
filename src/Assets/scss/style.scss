@@ -23,5 +23,9 @@
 @import './layout/layout.scss';
 
 /* Components */
+@import './components/app/app';
 @import './components/header/header';
 @import './components/home/home';
+@import './components/home/animation';
+@import './components/introduction/introduction';
+@import './components/icons/icon-sound';
