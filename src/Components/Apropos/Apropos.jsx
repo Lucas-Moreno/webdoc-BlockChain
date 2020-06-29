@@ -4,6 +4,8 @@ import Information from "./Informations/Informations";
 import Credits from "./Credits/Credits";
 import Remerciements from "./Remerciements/Remerciements";
 import "../../Assets/scss/components/Apropos/_apropos.scss";
+import Logo from "../../Assets/images/logo.png";
+import BackArrow from "../../Assets/images/back-arrow.png";
 
 const Apropos = () => {
   const [disclaimer, setDisclaimer] = useState(true);
@@ -41,7 +43,11 @@ const Apropos = () => {
   return (
     <div>
       <h1>a propos</h1>
-      <span>Retour</span>
+      <img src={Logo} />
+      <div>
+        <img src={BackArrow} />
+        <span>Retour</span>
+      </div>
       <div className="container_button">
         <div className="button_apropos" onClick={Disclaimer}>
           <p className="button_text">disclaimer</p>

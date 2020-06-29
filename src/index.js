@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home";
 import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
 import Apropos from "./Components/Apropos/Apropos";
+import Sommaire from "./Components/Sommaire/Sommaire";
 
 import * as serviceWorker from "./serviceWorker";
 
