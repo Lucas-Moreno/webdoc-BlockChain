@@ -3,7 +3,7 @@ import Disclaimers from "./Disclaimer/Disclaimer";
 import Information from "./Informations/Informations";
 import Credits from "./Credits/Credits";
 import Remerciements from "./Remerciements/Remerciements";
-import "../Apropos/Apropos.scss";
+import "../../Assets/scss/components/Apropos/_apropos.scss";
 
 const Apropos = () => {
   const [disclaimer, setDisclaimer] = useState(true);
