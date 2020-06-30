@@ -27,7 +27,7 @@ const ChapterOne = () => {
 
       <div>
         <p>Voir Chapitre 1</p>
-        <img src={rightArrow} />
+        <img src={rightArrow} alt="" />
       </div>
     </div>
   );
