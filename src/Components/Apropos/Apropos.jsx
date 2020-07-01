@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Disclaimers from './Disclaimer/Disclaimer';
-import Information from './Informations/Informations';
-import Credits from './Credits/Credits';
-import Remerciements from './Remerciements/Remerciements';
-import BackArrow from '../../Assets/images/back-arrow.png';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import Disclaimers from "./Disclaimer/Disclaimer";
+import Information from "./Informations/Informations";
+import Credits from "./Credits/Credits";
+import Remerciements from "./Remerciements/Remerciements";
+import BackArrow from "../../Assets/images/back-arrow.png";
+import { Link } from "react-router-dom";
 //import Header from '../../Components/Header/Header';
 
 const Apropos = () => {
@@ -12,7 +12,6 @@ const Apropos = () => {
   const [informations, setInformations] = useState(false);
   const [credit, setCredit] = useState(false);
   const [remerciement, setRemerciement] = useState(false);
-  const [active, setActivate] = useState(false);
 
   const Disclaimer = () => {
     setDisclaimer(true);
@@ -61,16 +60,28 @@ const Apropos = () => {
               </div>
               <nav className="apropos__navigation">
                 <ol className="list">
-                  <li className="item" onClick={Disclaimer}>
+                  <li
+                    className={`item ${disclaimer ? "active" : null}`}
+                    onClick={Disclaimer}
+                  >
                     Disclaimer
                   </li>
-                  <li className="item" onClick={Informations}>
+                  <li
+                    className={`item ${informations ? "active" : null}`}
+                    onClick={Informations}
+                  >
                     Informations
                   </li>
-                  <li className="item" onClick={Credit}>
+                  <li
+                    className={`item ${credit ? "active" : null}`}
+                    onClick={Credit}
+                  >
                     Credits
                   </li>
-                  <li className="item" onClick={Remerciement}>
+                  <li
+                    className={`item ${remerciement ? "active" : null}`}
+                    onClick={Remerciement}
+                  >
                     Remerciements
                   </li>
                 </ol>
