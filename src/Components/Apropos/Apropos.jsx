@@ -1,17 +1,18 @@
-import React, { useState } from "react";
-import Disclaimers from "./Disclaimer/Disclaimer";
-import Information from "./Informations/Informations";
-import Credits from "./Credits/Credits";
-import Remerciements from "./Remerciements/Remerciements";
-import Logo from "../../Assets/images/logo.png";
-import BackArrow from "../../Assets/images/back-arrow.png";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import Disclaimers from './Disclaimer/Disclaimer';
+import Information from './Informations/Informations';
+import Credits from './Credits/Credits';
+import Remerciements from './Remerciements/Remerciements';
+import BackArrow from '../../Assets/images/back-arrow.png';
+import { Link } from 'react-router-dom';
+//import Header from '../../Components/Header/Header';
 
 const Apropos = () => {
   const [disclaimer, setDisclaimer] = useState(true);
   const [informations, setInformations] = useState(false);
   const [credit, setCredit] = useState(false);
   const [remerciement, setRemerciement] = useState(false);
+  const [active, setActivate] = useState(false);
 
   const Disclaimer = () => {
     setDisclaimer(true);
@@ -41,34 +42,47 @@ const Apropos = () => {
     setCredit(false);
   };
   return (
-    <div>
-      <h1>a propos</h1>
-      <img src={Logo} alt="Logo" />
-      <Link to="/">
-        <div>
-          <img src={BackArrow} alt="" />
-          <span>Retour</span>
-        </div>
-      </Link>
-
-      <div className="container_button">
-        <div className="button_apropos" onClick={Disclaimer}>
-          <p className="button_text">disclaimer</p>
-        </div>
-        <div className="button_apropos" onClick={Informations}>
-          <p className="button_text">informations</p>
-        </div>
-        <div className="button_apropos" onClick={Credit}>
-          <p className="button_text">credits</p>
-        </div>
-        <div className="button_apropos" onClick={Remerciement}>
-          <p className="button_text">remerciements</p>
+    <div className="apropos__container">
+      {/* <Header /> */}
+      <div className="wrapper wrapper--apropos">
+        <div className="container">
+          <div className="contents">
+            <div className="apropos">
+              <div className="apropos__back">
+                <Link to="/">
+                  <div className="back">
+                    <img className="back__arrow" src={BackArrow} alt="" />
+                    <span className="back__text">Retour</span>
+                  </div>
+                </Link>
+              </div>
+              <div className="apropos__title">
+                <h1 className="title">À propos</h1>
+              </div>
+              <nav className="apropos__navigation">
+                <ol className="list">
+                  <li className="item" onClick={Disclaimer}>
+                    Disclaimer
+                  </li>
+                  <li className="item" onClick={Informations}>
+                    Informations
+                  </li>
+                  <li className="item" onClick={Credit}>
+                    Credits
+                  </li>
+                  <li className="item" onClick={Remerciement}>
+                    Remerciements
+                  </li>
+                </ol>
+              </nav>
+              {disclaimer ? <Disclaimers /> : null}
+              {informations ? <Information /> : null}
+              {credit ? <Credits /> : null}
+              {remerciement ? <Remerciements /> : null}
+            </div>
+          </div>
         </div>
       </div>
-      {disclaimer ? <Disclaimers /> : null}
-      {informations ? <Information /> : null}
-      {credit ? <Credits /> : null}
-      {remerciement ? <Remerciements /> : null}
     </div>
   );
 };
