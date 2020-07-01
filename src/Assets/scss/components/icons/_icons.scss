@@ -1,0 +1,15 @@
+.icons {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: row;
+
+  .icon {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 1.25rem; // 20px
+    }
+  }
+}

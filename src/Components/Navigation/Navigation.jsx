@@ -1,19 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <div className="navigation">
-      <Link to="/apropos">
-        <button>A propos</button>
-      </Link>
-      <Link to="/doc">
-        <button>Commencer l'expérience</button>
-      </Link>
-      <Link to="/sommaire">
-        <button>Sommaire</button>
-      </Link>
-    </div>
+    <nav className="navigation">
+      <ol className="navigation__list">
+        <li className="item item--one">
+          <Link to="/apropos">
+            <button className="button button--secondary">À propos</button>
+          </Link>
+        </li>
+        <li className="item item--two">
+          <Link to="/doc">
+            <button className="button button--primary">
+              Commencer l'expérience
+            </button>
+          </Link>
+        </li>
+        <li className="item item--three">
+          <Link to="/sommaire">
+            <button className="button button--secondary">Sommaire</button>
+          </Link>
+        </li>
+      </ol>
+    </nav>
   );
 };
 

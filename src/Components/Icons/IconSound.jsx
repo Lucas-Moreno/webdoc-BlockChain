@@ -2,7 +2,7 @@ import React from 'react';
 
 const IconSound = () => {
   return (
-    <div className="icon-sound">
+    <div className="icon icon--sound" title="Modifier le son">
       <div className="contents">
         <span
           dangerouslySetInnerHTML={{

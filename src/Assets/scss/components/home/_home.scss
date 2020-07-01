@@ -22,10 +22,11 @@ $cta-scroll-text-font-sizes: (
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  opacity: 0;
 
   .home {
     position: relative;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0 $main-gap;
     grid-template-areas: 'carousel carousel carousel carousel carousel illustration illustration illustration illustration illustration illustration illustration';
@@ -35,6 +36,7 @@ $cta-scroll-text-font-sizes: (
       min-width: 447px;
       z-index: 100;
       margin-top: 14.375rem; // 230px
+      opacity: 0;
 
       .slide {
         cursor: grab;
@@ -67,13 +69,17 @@ $cta-scroll-text-font-sizes: (
 
     &__illustration {
       grid-area: illustration;
+      opacity: 0;
     }
 
     &__cta-scroll {
+      display: none;
       position: absolute;
       bottom: 15px;
       left: 50%;
       transform: translate3d(-50%, 0, 0);
+      cursor: pointer;
+      opacity: 0;
 
       .contents {
         display: flex;
