@@ -37,33 +37,33 @@ $cta-scroll-text-font-sizes: (
       z-index: 100;
       margin-top: 14.375rem; // 230px
       opacity: 0;
+    }
 
-      .slide {
-        cursor: grab;
+    .slide {
+      cursor: grab;
 
-        &__title,
-        &__subtitle {
-          font-family: $hackney-font-stack;
-        }
+      &__title,
+      &__subtitle {
+        font-family: $hackney-font-stack;
+      }
 
-        &__title {
-          @include font-size($slide-title-font-sizes);
-          color: v(white-color);
-          text-transform: uppercase;
-        }
+      &__title {
+        @include font-size($slide-title-font-sizes);
+        color: v(white-color);
+        text-transform: uppercase;
+      }
 
-        &__subtitle {
-          @include font-size($slide-subtitle-font-sizes);
-          color: v(blue-color);
-          text-transform: uppercase;
-        }
+      &__subtitle {
+        @include font-size($slide-subtitle-font-sizes);
+        color: v(blue-color);
+        text-transform: uppercase;
+      }
 
-        &__text {
-          @include font-size($slide-text-font-sizes);
-          color: v(white-color);
-          font-weight: 500;
-          margin-top: 0.625rem; // 10px
-        }
+      &__text {
+        @include font-size($slide-text-font-sizes);
+        color: v(white-color);
+        font-weight: 500;
+        margin-top: 0.625rem; // 10px
       }
     }
 
