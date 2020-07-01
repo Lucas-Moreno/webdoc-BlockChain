@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Sound from "react-sound";
-import soundfile from "../../Assets/audio/test.wav";
+import soundfile from "../../Assets/audio/son-home.mp3";
 
 const IconSound = () => {
   const [swapSound, setSwapSound] = useState(Sound.status.PLAYING);
