@@ -7,6 +7,8 @@
 @import "./config/fonts.scss";
 // Typography
 @import "./config/typography.scss";
+// Bases
+@import "./config/bases.scss";
 
 /* Vendors */
 // Reset CSS
@@ -28,5 +30,9 @@
 @import "./components/home/home";
 @import "./components/home/animation";
 @import "./components/introduction/introduction";
-@import "./components/icons/icon-sound";
+@import "./components/introduction/disclaimer";
+@import "./components/introduction/informations";
+@import "./components/introduction/texts";
+@import "./components/navigation/navigation";
+@import "./components/icons/icons";
 @import "./components/apropos/apropos";

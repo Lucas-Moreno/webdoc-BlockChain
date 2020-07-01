@@ -1,0 +1,30 @@
+$disclaimer-title-font-sizes: (
+  null: 3.25rem /* 52px */,
+);
+
+$disclaimer-text-font-sizes: (
+  null: 1.375rem /* 22px */,
+);
+
+.disclaimer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $hackney-font-stack;
+  max-width: 630px;
+  text-transform: uppercase;
+  opacity: 0;
+
+  &__title {
+    @include font-size($disclaimer-title-font-sizes);
+    color: v(blue-color);
+    margin-bottom: 0.9375rem; // 15px
+  }
+
+  &__text {
+    @include font-size($disclaimer-text-font-sizes);
+    color: v(white-color);
+    text-align: center;
+  }
+}

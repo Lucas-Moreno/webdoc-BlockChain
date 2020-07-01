@@ -5,12 +5,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: none;
+
+  .contents,
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
 
   .introduction {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 0 $main-gap;
-    // grid-template-areas: 'carousel carousel carousel carousel carousel illustration illustration illustration illustration illustration illustration illustration';
+    margin-top: 30vh;
   }
 }
