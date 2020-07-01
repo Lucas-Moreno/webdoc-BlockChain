@@ -8,38 +8,7 @@ import BackArrow from "../../Assets/images/back-arrow.png";
 import { Link } from "react-router-dom";
 
 const Apropos = () => {
-  const [chapterOne, setChapterOne] = useState(true);
-  const [chapterTwo, setChapterTwo] = useState(false);
-  const [chapterThree, setChapterThree] = useState(false);
-  const [chapterFour, setChapterFour] = useState(false);
-
-  const ChapterOne = () => {
-    setChapterOne(true);
-    setChapterTwo(false);
-    setChapterThree(false);
-    setChapterFour(false);
-  };
-
-  const ChapterTwo = () => {
-    setChapterTwo(true);
-    setChapterOne(false);
-    setChapterThree(false);
-    setChapterFour(false);
-  };
-
-  const ChapterThree = () => {
-    setChapterThree(true);
-    setChapterOne(false);
-    setChapterFour(false);
-    setChapterTwo(false);
-  };
-
-  const ChapterFour = () => {
-    setChapterFour(true);
-    setChapterOne(false);
-    setChapterTwo(false);
-    setChapterThree(false);
-  };
+  const [active, setActive] = useState("chapterOne");
   return (
     <div>
       <h1>Sommaire</h1>
@@ -51,23 +20,29 @@ const Apropos = () => {
         </div>
       </Link>
       <div className="container_button">
-        <div className="button_apropos" onClick={ChapterOne}>
+        <div className="button_apropos" onClick={() => setActive("chapterOne")}>
           <p className="button_text">Chapitre 1</p>
         </div>
-        <div className="button_apropos" onClick={ChapterTwo}>
+        <div className="button_apropos" onClick={() => setActive("chapterTwo")}>
           <p className="button_text">Chapitre 2</p>
         </div>
-        <div className="button_apropos" onClick={ChapterThree}>
+        <div
+          className="button_apropos"
+          onClick={() => setActive("chapterThree")}
+        >
           <p className="button_text">Chapitre 3</p>
         </div>
-        <div className="button_apropos" onClick={ChapterFour}>
+        <div
+          className="button_apropos"
+          onClick={() => setActive("chapterFour")}
+        >
           <p className="button_text">Chapitre 4</p>
         </div>
       </div>
-      {chapterOne ? <ChapitreUn /> : null}
-      {chapterTwo ? <ChapitreDeux /> : null}
-      {chapterThree ? <ChapitreTrois /> : null}
-      {chapterFour ? <ChapitreQuatre /> : null}
+      {active === "chapterOne" ? <ChapitreUn /> : null}
+      {active === "chapterTwo" ? <ChapitreDeux /> : null}
+      {active === "chapterThree" ? <ChapitreTrois /> : null}
+      {active === "chapterFour" ? <ChapitreQuatre /> : null}
     </div>
   );
 };
