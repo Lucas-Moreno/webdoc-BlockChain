@@ -1,0 +1,54 @@
+$navigation-button-font-sizes: (
+  null: 1.125rem /* 18px */,
+);
+
+.navigation {
+  display: none;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &--one {
+      opacity: 0;
+    }
+
+    &--two {
+      opacity: 0;
+    }
+
+    &--three {
+      opacity: 0;
+    }
+
+    .button {
+      @include font-size($navigation-button-font-sizes);
+      font-family: $main-font-stack;
+      font-weight: 700;
+      width: 307px;
+      height: 60px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &--primary {
+        background-color: v(yellow-color);
+        color: v(black-custom-color);
+        border: solid 1px v(yellow-color);
+      }
+
+      &--secondary {
+        background-color: v(black-custom-color);
+        color: v(white-color);
+        border: solid 1px v(black-custom-color);
+      }
+    }
+  }
+}

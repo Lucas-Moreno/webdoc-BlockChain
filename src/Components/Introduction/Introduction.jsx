@@ -1,5 +1,7 @@
 import React from 'react';
-import IconSound from '../IconSound/IconSound.jsx';
+import IconSound from '../Icons/IconSound.jsx';
+import IconReplay from '../Icons/IconReplay.jsx';
+import IconSkip from '../Icons/IconSkip.jsx';
 import IntroductionDisclaimer from './Disclaimer/Disclaimer';
 import IntroductionInformations from './Informations/Informations';
 import IntroductionTexts from './Texts/Texts';
@@ -9,14 +11,20 @@ const Introduction = () => {
   return (
     <div className="wrapper wrapper--introduction">
       <div className="container">
-        <div className="introduction">
-          <IntroductionDisclaimer />
-          <IntroductionInformations />
-          <IntroductionTexts />
-          <Navigation />
+        <div className="contents">
+          <div className="introduction">
+            <IntroductionDisclaimer />
+            <IntroductionInformations />
+            <IntroductionTexts />
+            <Navigation />
+          </div>
         </div>
       </div>
-      <IconSound />
+      <div className="icons">
+        <IconSkip />
+        <IconReplay />
+        <IconSound />
+      </div>
     </div>
   );
 };
