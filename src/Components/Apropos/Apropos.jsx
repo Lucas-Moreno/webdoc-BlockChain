@@ -8,38 +8,8 @@ import { Link } from "react-router-dom";
 //import Header from '../../Components/Header/Header';
 
 const Apropos = () => {
-  const [disclaimer, setDisclaimer] = useState(true);
-  const [informations, setInformations] = useState(false);
-  const [credit, setCredit] = useState(false);
-  const [remerciement, setRemerciement] = useState(false);
+  const [active, setActive] = useState("disclaimer");
 
-  const Disclaimer = () => {
-    setDisclaimer(true);
-    setInformations(false);
-    setCredit(false);
-    setRemerciement(false);
-  };
-
-  const Informations = () => {
-    setInformations(true);
-    setDisclaimer(false);
-    setCredit(false);
-    setRemerciement(false);
-  };
-
-  const Credit = () => {
-    setCredit(true);
-    setDisclaimer(false);
-    setRemerciement(false);
-    setInformations(false);
-  };
-
-  const Remerciement = () => {
-    setRemerciement(true);
-    setDisclaimer(false);
-    setInformations(false);
-    setCredit(false);
-  };
   return (
     <div className="apropos__container">
       {/* <Header /> */}
@@ -61,35 +31,41 @@ const Apropos = () => {
               <nav className="apropos__navigation">
                 <ol className="list">
                   <li
-                    className={`item ${disclaimer ? "active" : null}`}
-                    onClick={Disclaimer}
+                    className={`item ${
+                      active === "disclaimer" ? "active" : null
+                    }`}
+                    onClick={() => setActive("disclaimer")}
                   >
                     Disclaimer
                   </li>
                   <li
-                    className={`item ${informations ? "active" : null}`}
-                    onClick={Informations}
+                    className={`item ${
+                      active === "informations" ? "active" : null
+                    }`}
+                    onClick={() => setActive("informations")}
                   >
                     Informations
                   </li>
                   <li
-                    className={`item ${credit ? "active" : null}`}
-                    onClick={Credit}
+                    className={`item ${active === "credit" ? "active" : null}`}
+                    onClick={() => setActive("credit")}
                   >
                     Credits
                   </li>
                   <li
-                    className={`item ${remerciement ? "active" : null}`}
-                    onClick={Remerciement}
+                    className={`item ${
+                      active === "remerciement" ? "active" : null
+                    }`}
+                    onClick={() => setActive("remerciement")}
                   >
                     Remerciements
                   </li>
                 </ol>
               </nav>
-              {disclaimer ? <Disclaimers /> : null}
-              {informations ? <Information /> : null}
-              {credit ? <Credits /> : null}
-              {remerciement ? <Remerciements /> : null}
+              {active === "disclaimer" ? <Disclaimers /> : null}
+              {active === "informations" ? <Information /> : null}
+              {active === "credit" ? <Credits /> : null}
+              {active === "remerciement" ? <Remerciements /> : null}
             </div>
           </div>
         </div>

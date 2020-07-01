@@ -1,8 +1,8 @@
 /* Config */
 // Functions
-@import "./config/functions.scss";
+@import "./config/_functions.scss";
 // Variables
-@import "./config/variables.scss";
+@import "./config/_variables.scss";
 // Fonts
 @import "./config/fonts.scss";
 // Typography
@@ -22,17 +22,17 @@
 
 /* Layout */
 // Principal Layout
-@import "./layout/layout.scss";
+@import "./layout/_layout.scss";
 
 /* Components */
-@import "./components/app/app";
-@import "./components/header/header";
-@import "./components/home/home";
-@import "./components/home/animation";
-@import "./components/introduction/introduction";
-@import "./components/introduction/disclaimer";
-@import "./components/introduction/informations";
-@import "./components/introduction/texts";
-@import "./components/navigation/navigation";
-@import "./components/icons/icons";
-@import "./components/apropos/apropos";
+@import "./components/app/_app";
+@import "./components/header/_header";
+@import "./components/home/_home";
+@import "./components/home/_animation";
+@import "./components/introduction/_introduction";
+@import "./components/introduction/_disclaimer";
+@import "./components/introduction/_informations";
+@import "./components/introduction/_texts";
+@import "./components/navigation/_navigation";
+@import "./components/icons/_icons";
+@import "./components/apropos/_apropos";
