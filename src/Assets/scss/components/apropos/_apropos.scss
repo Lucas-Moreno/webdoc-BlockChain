@@ -1,13 +1,13 @@
 $apropos-title-font-sizes: (
-  null: 6rem /* 96px */,
+  null: 6rem /* 96px */
 );
 
 $apropos-navigation-item-font-sizes: (
-  null: 1.125rem /* 18px */,
+  null: 1.125rem /* 18px */
 );
 
 $apropos-content-title-font-sizes: (
-  null: 2.25rem /* 36px */,
+  null: 2.25rem /* 36px */
 );
 
 .apropos__container {
@@ -27,9 +27,9 @@ $apropos-content-title-font-sizes: (
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0 $main-gap;
     grid-template-areas:
-      'back back . title title title title title title . . .'
-      'nav nav nav nav nav nav nav nav nav nav nav nav'
-      'contents contents contents contents contents contents contents contents contents contents contents contents';
+      "back back . title title title title title title . . ."
+      "nav nav nav nav nav nav nav nav nav nav nav nav"
+      "contents contents contents contents contents contents contents contents contents contents contents contents";
 
     &__back {
       grid-area: back;

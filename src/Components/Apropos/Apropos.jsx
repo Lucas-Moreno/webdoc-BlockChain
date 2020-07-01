@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 const Apropos = () => {
   const [active, setActive] = useState("disclaimer");
+  const lis = ["disclaimer", "informations", "credits", "remerciements"];
 
   return (
     <div className="apropos__container">
