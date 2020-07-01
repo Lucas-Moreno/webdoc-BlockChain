@@ -4,21 +4,21 @@
 // Variables
 @import "./config/_variables.scss";
 // Fonts
-@import "./config/fonts.scss";
+@import "./config/_fonts.scss";
 // Typography
-@import "./config/typography.scss";
+@import "./config/_typography.scss";
 // Bases
-@import "./config/bases.scss";
+@import "./config/_bases.scss";
 
 /* Vendors */
 // Reset CSS
-@import "./vendors/reset.scss";
+@import "./vendors/_reset.scss";
 // Breakpoint SASS
 @import "~breakpoint-sass/stylesheets/breakpoint";
 // React-Slick
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-@import "./vendors/react-slick";
+@import "./vendors/_react-slick";
 
 /* Layout */
 // Principal Layout
