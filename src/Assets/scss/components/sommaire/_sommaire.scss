@@ -1,31 +1,35 @@
-$apropos-title-font-sizes: (
-  null: 6rem /* 96px */
+$sommaire-title-font-sizes: (
+  null: 6rem /* 96px */,
 );
 
-$apropos-navigation-item-font-sizes: (
-  null: 1.125rem /* 18px */
+$sommaire-navigation-item-font-sizes: (
+  null: 1.125rem /* 18px */,
 );
 
-$apropos-content-title-font-sizes: (
-  null: 2.25rem /* 36px */
+$sommaire-content-title-font-sizes: (
+  null: 2.25rem /* 36px */,
 );
 
-.apropos__container {
+$sommaire-launch-text-font-sizes: (
+  null: 0.875rem /* 14px */,
+);
+
+.sommaire__container {
   height: 100vh;
   background-image: url(../../../images/background-introduction-desktop.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  .apropos {
+  .sommaire {
     position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0 $main-gap;
     grid-template-areas:
-      "back back . title title title title title title . . ."
-      "nav nav nav nav nav nav nav nav nav nav nav nav"
-      "contents contents contents contents contents contents contents contents contents contents contents contents";
+      'back back . title title title title title title . . .'
+      'nav nav nav nav nav nav nav nav nav nav nav nav'
+      'contents contents contents contents contents contents contents contents contents contents contents contents';
 
     &__back {
       grid-area: back;
@@ -50,7 +54,7 @@ $apropos-content-title-font-sizes: (
     }
 
     &__title {
-      @include font-size($apropos-title-font-sizes);
+      @include font-size($sommaire-title-font-sizes);
       font-family: $hackney-font-stack;
       grid-area: title;
       color: v(white-color);
@@ -70,7 +74,7 @@ $apropos-content-title-font-sizes: (
       }
 
       .item {
-        @include font-size($apropos-navigation-item-font-sizes);
+        @include font-size($sommaire-navigation-item-font-sizes);
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -116,7 +120,7 @@ $apropos-content-title-font-sizes: (
         overflow: auto;
 
         &__title {
-          @include font-size($apropos-content-title-font-sizes);
+          @include font-size($sommaire-content-title-font-sizes);
           font-family: $hackney-font-stack;
           color: v(blue-color);
           text-transform: uppercase;
@@ -125,6 +129,38 @@ $apropos-content-title-font-sizes: (
 
         p {
           margin-bottom: 0.9375rem; // 15px
+        }
+
+        &__launch {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 175px;
+          height: 27px;
+          background-color: v(white-color);
+          box-shadow: 10px 12px 1px 0px v(turquoise-shadow-color);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .launch {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+
+            &__text {
+              @include font-size($sommaire-launch-text-font-sizes);
+              font-weight: 700;
+              margin-right: 0.3125rem; // 5px
+            }
+
+            &__arrow {
+              width: 24px;
+              height: 17px;
+            }
+          }
         }
       }
     }

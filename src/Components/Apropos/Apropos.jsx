@@ -5,7 +5,6 @@ import Credits from "./Credits/Credits";
 import Remerciements from "./Remerciements/Remerciements";
 import BackArrow from "../../Assets/images/back-arrow.png";
 import { Link } from "react-router-dom";
-//import Header from '../../Components/Header/Header';
 
 const Apropos = () => {
   const [active, setActive] = useState("disclaimer");
@@ -13,7 +12,6 @@ const Apropos = () => {
 
   return (
     <div className="apropos__container">
-      {/* <Header /> */}
       <div className="wrapper wrapper--apropos">
         <div className="container">
           <div className="contents">
