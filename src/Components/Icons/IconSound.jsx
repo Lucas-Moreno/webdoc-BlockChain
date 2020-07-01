@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import Sound from "react-sound";
+import soundfile from "../../Assets/audio/test.wav";
 
 const IconSound = () => {
+  const [swapSound, setSwapSound] = useState(Sound.status.PLAYING);
+
+  const toggle = () => {
+    if (swapSound === Sound.status.PLAYING) {
+      setSwapSound(Sound.status.STOPPED);
+    } else {
+      setSwapSound(Sound.status.PLAYING);
+    }
+  };
+
   return (
     <div className="icon icon--sound" title="Modifier le son">
-      <div className="contents">
+      <Sound url={soundfile} playStatus={swapSound} loop={true} />
+      <div className="contents" onClick={toggle}>
         <span
           dangerouslySetInnerHTML={{
             __html: `<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
