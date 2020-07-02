@@ -6,7 +6,6 @@ import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
 import Apropos from "./Components/Apropos/Apropos";
 import Sommaire from "./Components/Sommaire/Sommaire";
-import Doc from "./Components/Doc/Doc";
 import ChapterOne from "./Components/Chapitres/ChapterOne"
 import ChapterTwo from './Components/Chapitres/ChapterTwo';
 import ChapterThree from './Components/Chapitres/ChapterThree';
@@ -22,7 +21,6 @@ const Root = () => (
       <Route exact path="/home" component={Home}></Route>
       <Route exact path="/apropos" component={Apropos}></Route>
       <Route exact path="/sommaire" component={Sommaire}></Route>
-      <Route exact path="/doc" component={Doc}></Route>
       <Route exact path="/chapitre-un" component={ChapterOne}></Route>
       <Route exact path="/chapitre-deux" component={ChapterTwo}></Route>
       <Route exact path="/chapitre-trois" component={ChapterThree}></Route>
