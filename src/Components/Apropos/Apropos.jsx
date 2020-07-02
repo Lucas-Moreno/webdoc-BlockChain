@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 
 const Apropos = () => {
   const [active, setActive] = useState("disclaimer");
-  const lis = ["disclaimer", "informations", "credits", "remerciements"];
+  const lis = ["disclaimer", "informations", "credit", "remerciement"];
+  const chapter = ["Disclaimer", "Informations", "Credits", "Remerciements"];
 
   return (
     <div className="apropos__container">
@@ -29,36 +30,14 @@ const Apropos = () => {
               </div>
               <nav className="apropos__navigation">
                 <ol className="list">
-                  <li
-                    className={`item ${
-                      active === "disclaimer" ? "active" : null
-                    }`}
-                    onClick={() => setActive("disclaimer")}
-                  >
-                    Disclaimer
-                  </li>
-                  <li
-                    className={`item ${
-                      active === "informations" ? "active" : null
-                    }`}
-                    onClick={() => setActive("informations")}
-                  >
-                    Informations
-                  </li>
-                  <li
-                    className={`item ${active === "credit" ? "active" : null}`}
-                    onClick={() => setActive("credit")}
-                  >
-                    Credits
-                  </li>
-                  <li
-                    className={`item ${
-                      active === "remerciement" ? "active" : null
-                    }`}
-                    onClick={() => setActive("remerciement")}
-                  >
-                    Remerciements
-                  </li>
+                  {lis.map((li, index) => (
+                    <li
+                      className={`item ${active === li ? "active" : null}`}
+                      onClick={() => setActive(li)}
+                    >
+                      {chapter[index]}
+                    </li>
+                  ))}
                 </ol>
               </nav>
               {active === "disclaimer" ? <Disclaimers /> : null}
