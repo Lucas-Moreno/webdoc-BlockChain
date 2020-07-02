@@ -3,10 +3,10 @@ import ChapterOne from "./ChapterOne/ChapterOne"
 
 const Doc = () => {
   return (
-    <div>
+    <div className="wrapper wrapper--doc">
       <h1>Webdocumentaire</h1>
       <ChapterOne>
-        
+
       </ChapterOne>
     </div>
   );

@@ -5,7 +5,6 @@ const ChapterOne = () => {
     return (
         <div>
             <ProgressionLine>
-
             </ProgressionLine>
         </div>
     )
