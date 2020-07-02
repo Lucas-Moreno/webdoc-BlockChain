@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { homeAnimations } from './Home';
 import Cryptomonnaies from './Cryptomonnaies/Cryptomonnaies';
 import Echanges from './Echanges/Echanges';
 import Revolutions from './Revolution/Revolution';
@@ -8,6 +9,7 @@ import HomeAnimation from './Animation/Animation.jsx';
 import Scroll from './Scroll/Scroll.jsx';
 
 const Home = () => {
+  // Settings Carousel
   const settings = {
     dots: true,
     arrows: false,
@@ -15,8 +17,14 @@ const Home = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
   };
+
+  useEffect(() => {
+    // Loader Animation
+    homeAnimations();
+  });
+
   return (
     <div className="wrapper wrapper--home">
       <div className="container">
