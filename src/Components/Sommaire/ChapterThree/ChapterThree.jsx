@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import rightArrow from '../../../Assets/images/right-arrow.png';
 import Illustration from '../../../Assets/images/disclaimerImg.png';
 import { Link } from 'react-router-dom';
+=======
+import React from "react";
+import rightArrow from "../../../Assets/images/right-arrow.png";
+import Illustration from "../../../Assets/images/disclaimerImg.png";
+>>>>>>> 548e90805d715fa06869b1c337f331bc03b2fb85
 
 const ChapterThree = () => {
   return (
@@ -10,7 +16,7 @@ const ChapterThree = () => {
         <img src={Illustration} alt="" />
       </div>
       <div className="content">
-        <h1 className="content__title">CHAPITRE 3 TITLE</h1>
+        <h1 className="content__title">CHAPITRE 3</h1>
         <div className="content__text">
           <p>
             Il est temps d'identifier et de hiérarchiser les différents domaines
