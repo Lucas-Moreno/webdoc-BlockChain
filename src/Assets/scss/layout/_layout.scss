@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all Principal Style Layouts Wrapper/Container/Contents.
+// -----------------------------------------------------------------------------
+.body,
+.root {
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  max-width: $container-max-width;
+  margin: auto;
+  padding: 0 30px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 $main-gap;
+  grid-template-areas: 'contents contents contents contents contents contents contents contents contents contents contents contents';
+}
+
+.contents {
+  grid-area: contents;
+}

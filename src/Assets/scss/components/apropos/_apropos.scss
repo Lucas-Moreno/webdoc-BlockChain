@@ -1,0 +1,132 @@
+$apropos-title-font-sizes: (
+  null: 6rem /* 96px */
+);
+
+$apropos-navigation-item-font-sizes: (
+  null: 1.125rem /* 18px */
+);
+
+$apropos-content-title-font-sizes: (
+  null: 2.25rem /* 36px */
+);
+
+.apropos__container {
+  height: 100vh;
+  background-image: url(../../../images/background-introduction-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .apropos {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 $main-gap;
+    grid-template-areas:
+      "back back . title title title title title title . . ."
+      "nav nav nav nav nav nav nav nav nav nav nav nav"
+      "contents contents contents contents contents contents contents contents contents contents contents contents";
+
+    &__back {
+      grid-area: back;
+      margin-top: 4.0625rem; // 65px
+
+      .back {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+
+        &__arrow {
+          width: 24px;
+          height: 17px;
+        }
+
+        &__text {
+          color: v(white-color);
+          margin-left: 0.3125rem; // 5px
+        }
+      }
+    }
+
+    &__title {
+      @include font-size($apropos-title-font-sizes);
+      font-family: $hackney-font-stack;
+      grid-area: title;
+      color: v(white-color);
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 0.625rem; // 10px
+    }
+
+    &__navigation {
+      grid-area: nav;
+      margin: 6.25rem 0 6.25rem 0; // 100px 0 100px 0
+
+      .list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .item {
+        @include font-size($apropos-navigation-item-font-sizes);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 248px;
+        height: 47px;
+        border-radius: 4px;
+        background-color: v(white-color);
+        color: v(blue-color);
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 600;
+
+        &.active {
+          background-color: v(yellow-color);
+          color: v(black-custom-color);
+        }
+      }
+    }
+
+    &__contents {
+      grid-area: contents;
+      display: flex;
+      flex-direction: row;
+
+      .illustration {
+        display: block;
+        min-width: 460px;
+        min-height: 460px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        background-color: v(white-color);
+        box-shadow: 24px 26px 1px 0px v(turquoise-shadow-color);
+        border-radius: 4px;
+        padding: 0.625rem 1.25rem; // 10px 20px
+        margin-left: 3.125rem; // 50px
+        max-height: 350px;
+        overflow: auto;
+
+        &__title {
+          @include font-size($apropos-content-title-font-sizes);
+          font-family: $hackney-font-stack;
+          color: v(blue-color);
+          text-transform: uppercase;
+          margin-bottom: 1.25rem; // 20px
+        }
+
+        p {
+          margin-bottom: 0.9375rem; // 15px
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.body {
+  font: normal 300 100% / $main-line-height $main-font-stack;
+  font-variant: none; //
+  color: v(text-color);
+}
+
+.color--blue {
+  color: v(blue-color);
+}
+
+.color--yellow {
+  color: v(yellow-color);
+}

@@ -1,0 +1,21 @@
+.wrapper--introduction {
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url(../../../images/background-introduction-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+
+  .contents,
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .introduction {
+    margin-top: 30vh;
+  }
+}

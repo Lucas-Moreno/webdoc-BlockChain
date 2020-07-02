@@ -1,0 +1,99 @@
+$slide-title-font-sizes: (
+  null: 5.75rem /* 92px */,
+);
+
+$slide-subtitle-font-sizes: (
+  null: 3.875rem /* 62px */,
+);
+
+$slide-text-font-sizes: (
+  null: 1.125rem /* 18px */,
+);
+
+$cta-scroll-text-font-sizes: (
+  null: 0.6875rem /* 11px */,
+);
+
+.wrapper--home {
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url(../../../images/background-home-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0;
+
+  .home {
+    position: relative;
+    display: none;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 $main-gap;
+    grid-template-areas: 'carousel carousel carousel carousel carousel illustration illustration illustration illustration illustration illustration illustration';
+
+    &__carousel {
+      grid-area: carousel;
+      min-width: 447px;
+      z-index: 100;
+      margin-top: 14.375rem; // 230px
+      opacity: 0;
+    }
+
+    .slide {
+      cursor: grab;
+
+      &__title,
+      &__subtitle {
+        font-family: $hackney-font-stack;
+      }
+
+      &__title {
+        @include font-size($slide-title-font-sizes);
+        color: v(white-color);
+        text-transform: uppercase;
+      }
+
+      &__subtitle {
+        @include font-size($slide-subtitle-font-sizes);
+        color: v(blue-color);
+        text-transform: uppercase;
+      }
+
+      &__text {
+        @include font-size($slide-text-font-sizes);
+        color: v(white-color);
+        font-weight: 500;
+        margin-top: 0.625rem; // 10px
+      }
+    }
+
+    &__illustration {
+      grid-area: illustration;
+      opacity: 0;
+    }
+
+    &__cta-scroll {
+      display: none;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      cursor: pointer;
+      opacity: 0;
+
+      .contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          @include font-size($cta-scroll-text-font-sizes);
+          text-transform: capitalize;
+          color: v(white-color);
+          margin-top: 0.4375rem; // 7px
+        }
+      }
+    }
+  }
+}

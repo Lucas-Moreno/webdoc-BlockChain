@@ -1,0 +1,20 @@
+$informations-text-font-sizes: (
+  null: 1.375rem /* 22px */,
+);
+
+.informations {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $hackney-font-stack;
+  text-transform: uppercase;
+  opacity: 0;
+
+    &__text {
+    @include font-size($informations-text-font-sizes);
+    color: v(white-color);
+    text-align: center;
+    margin-top: 0.9375rem; // 15px
+  }
+}

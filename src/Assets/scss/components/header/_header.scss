@@ -1,0 +1,30 @@
+$header-title-font-sizes: (
+  null: 9.5rem /* 152px */,
+);
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 2.5rem; // 40px
+  z-index: 100;
+
+  &__title {
+    @include font-size($header-title-font-sizes);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $hackney-font-stack;
+    color: v(white-color);
+    line-height: 0.7;
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  &__logo {
+    display: none;
+    opacity: 0;
+  }
+}
