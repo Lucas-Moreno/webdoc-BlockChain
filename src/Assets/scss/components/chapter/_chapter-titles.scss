@@ -1,0 +1,27 @@
+$container-title-font-sizes: (
+  null: 6rem /* 96px */,
+);
+
+$container-subtitle-font-sizes: (
+  null: 3rem /* 96px */,
+);
+
+.chapter-titles {
+  font-family: $hackney-font-stack;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 3.125rem; //50px
+  margin-top: -30px;
+
+  .title {
+    @include font-size($container-title-font-sizes);
+    color: v(yellow-color);
+  }
+
+  .subtitle {
+    @include font-size($container-subtitle-font-sizes);
+    color: v(blue-color);
+    margin-left: 6.5625rem; // 105px
+  }
+}

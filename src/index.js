@@ -4,9 +4,9 @@ import "./Assets/scss/style.scss";
 import Home from "./Components/Home/Home.jsx";
 import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
-import Apropos from "./Components/Apropos/Apropos";
-import Sommaire from "./Components/Sommaire/Sommaire";
-import ChapterOne from "./Components/Chapitres/ChapterOne"
+import About from "./Components/About/About";
+import Summary from "./Components/Summary/Summary";
+import ChapterOne from './Components/Chapitres/ChapterOne/ChapterOne';
 import ChapterTwo from './Components/Chapitres/ChapterTwo';
 import ChapterThree from './Components/Chapitres/ChapterThree';
 
@@ -19,8 +19,8 @@ const Root = () => (
     <Switch>
       <Route exact path="/" component={App}></Route>
       <Route exact path="/home" component={Home}></Route>
-      <Route exact path="/apropos" component={Apropos}></Route>
-      <Route exact path="/sommaire" component={Sommaire}></Route>
+      <Route exact path="/a-propos" component={About}></Route>
+      <Route exact path="/sommaire" component={Summary}></Route>
       <Route exact path="/chapitre-un" component={ChapterOne}></Route>
       <Route exact path="/chapitre-deux" component={ChapterTwo}></Route>
       <Route exact path="/chapitre-trois" component={ChapterThree}></Route>
