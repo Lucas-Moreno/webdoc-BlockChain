@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import ChapitreUn from './ChapterOne/ChapterOne';
 import ChapitreDeux from './ChapterTwo/ChapterTwo';
 import ChapitreTrois from './ChapterThree/ChapterThree';
-import ChapitreQuatre from './ChapterFour/ChapterFour';
 import Logo from '../../Assets/images/logo.png';
 import BackArrow from '../../Assets/images/back-arrow.png';
 import { Link } from 'react-router-dom';
 
 const Apropos = () => {
   const [active, setActive] = useState('chapterOne');
-  const lis = ['chapterOne', 'chapterTwo', 'chapterThree', 'chapterFour'];
+  const lis = ['chapterOne', 'chapterTwo', 'chapterThree'];
 
   return (
     <div className="sommaire__container">
@@ -54,20 +53,11 @@ const Apropos = () => {
                   >
                     Chapitre 3
                   </li>
-                  <li
-                    className={`item ${
-                      active === 'chapterFour' ? 'active' : null
-                    }`}
-                    onClick={() => setActive('chapterFour')}
-                  >
-                    Chapitre 4
-                  </li>
                 </ol>
               </nav>
               {active === 'chapterOne' ? <ChapitreUn /> : null}
               {active === 'chapterTwo' ? <ChapitreDeux /> : null}
               {active === 'chapterThree' ? <ChapitreTrois /> : null}
-              {active === 'chapterFour' ? <ChapitreQuatre /> : null}
             </div>
           </div>
         </div>

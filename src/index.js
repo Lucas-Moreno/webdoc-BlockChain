@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./Assets/scss/style.scss";
-import './Assets/js/main.js';
 import Home from "./Components/Home/Home";
 import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
 import Apropos from "./Components/Apropos/Apropos";
 import Sommaire from "./Components/Sommaire/Sommaire";
 import Doc from "./Components/Doc/Doc";
+import ChapterOne from "./Components/Chapitres/ChapterOne"
+import ChapterTwo from './Components/Chapitres/ChapterTwo';
+import ChapterThree from './Components/Chapitres/ChapterThree';
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -21,6 +23,9 @@ const Root = () => (
       <Route exact path="/apropos" component={Apropos}></Route>
       <Route exact path="/sommaire" component={Sommaire}></Route>
       <Route exact path="/doc" component={Doc}></Route>
+      <Route exact path="/chapitre-un" component={ChapterOne}></Route>
+      <Route exact path="/chapitre-deux" component={ChapterTwo}></Route>
+      <Route exact path="/chapitre-trois" component={ChapterThree}></Route>
       <Route component={NotFound}></Route>
     </Switch>
   </BrowserRouter>

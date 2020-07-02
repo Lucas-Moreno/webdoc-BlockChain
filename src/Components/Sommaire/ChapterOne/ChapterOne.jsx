@@ -1,6 +1,7 @@
 import React from 'react';
 import rightArrow from '../../../Assets/images/right-arrow.png';
 import Illustration from '../../../Assets/images/disclaimerImg.png';
+import { Link } from 'react-router-dom';
 
 const ChapterOne = () => {
   return (
@@ -29,10 +30,12 @@ const ChapterOne = () => {
           </p>
         </div>
         <div className="content__launch">
-          <div className="launch">
-            <span className="launch__text">Voir le chapitre 1</span>
-            <img className="launch__arrow" src={rightArrow} alt="" />
-          </div>
+          <Link to="/chapitre-un">
+            <div className="launch">
+              <span className="launch__text">Voir le chapitre 1</span>
+              <img className="launch__arrow" src={rightArrow} alt="" />
+            </div>
+          </Link>
         </div>
       </div>
     </div>
