@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./Assets/scss/style.scss";
-import Home from "./Components/Home/Home";
+import Home from "./Components/Home/Home.jsx";
 import App from "./App/App";
 import NotFound from "./Components/Notfound/Notfound";
 import Apropos from "./Components/Apropos/Apropos";

@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 const Apropos = () => {
   const [active, setActive] = useState('chapterOne');
   const lis = ['chapterOne', 'chapterTwo', 'chapterThree'];
+  const chapter = ['Chapitre 1', 'Chapitre 2', 'Chapitre 3', 'Chapitre 4'];
 
   return (
     <div className="sommaire__container">
@@ -29,35 +30,19 @@ const Apropos = () => {
               </div>
               <nav className="sommaire__navigation">
                 <ol className="list">
-                  <li
-                    className={`item ${
-                      active === 'chapterOne' ? 'active' : null
-                    }`}
-                    onClick={() => setActive('chapterOne')}
-                  >
-                    Chapitre 1
-                  </li>
-                  <li
-                    className={`item ${
-                      active === 'chapterTwo' ? 'active' : null
-                    }`}
-                    onClick={() => setActive('chapterTwo')}
-                  >
-                    Chapitre 2
-                  </li>
-                  <li
-                    className={`item ${
-                      active === 'chapterThree' ? 'active' : null
-                    }`}
-                    onClick={() => setActive('chapterThree')}
-                  >
-                    Chapitre 3
-                  </li>
+                  {lis.map((li, index) => (
+                    <li
+                      className={`item ${active === li ? "active" : null}`}
+                      onClick={() => setActive(li)}
+                    >
+                      {chapter[index]}
+                    </li>
+                  ))}
                 </ol>
               </nav>
-              {active === 'chapterOne' ? <ChapitreUn /> : null}
-              {active === 'chapterTwo' ? <ChapitreDeux /> : null}
-              {active === 'chapterThree' ? <ChapitreTrois /> : null}
+              {active === "chapterOne" ? <ChapitreUn /> : null}
+              {active === "chapterTwo" ? <ChapitreDeux /> : null}
+              {active === "chapterThree" ? <ChapitreTrois /> : null}
             </div>
           </div>
         </div>
