@@ -27,16 +27,23 @@
 /* Components */
 @import "./components/app/_app";
 @import "./components/header/_header";
+// Home Components
 @import "./components/home/_home";
 @import "./components/home/_animation";
+// Introduction Components
 @import "./components/introduction/_introduction";
 @import "./components/introduction/_disclaimer";
 @import "./components/introduction/_informations";
 @import "./components/introduction/_texts";
 @import "./components/navigation/_navigation";
 @import "./components/icons/_icons";
-@import "./components/apropos/_apropos";
-@import "./components/sommaire/_sommaire";
-@import "./components/progression-line/progression-line";
-@import "./components/chapter-title/chapter-title";
-@import "./components/burger-menu/burger-menu";
+@import "./components/about/_about";
+@import "./components/summary/_summary";
+// Chapter Components
+@import "./components/chapter/_chapter";
+@import "./components/chapter/_chapter-header";
+@import "./components/chapter/_chapter-menu";
+@import "./components/chapter/_progression-bar";
+@import "./components/chapter/_chapter-titles";
+@import "./components/chapter/_parts";
+
