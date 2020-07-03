@@ -6,7 +6,7 @@ const Navigation = () => {
     <nav className="navigation">
       <ol className="navigation__list">
         <li className="item item--one">
-          <Link to="/apropos">
+          <Link to="/a-propos">
             <button className="button button--secondary">À propos</button>
           </Link>
         </li>
