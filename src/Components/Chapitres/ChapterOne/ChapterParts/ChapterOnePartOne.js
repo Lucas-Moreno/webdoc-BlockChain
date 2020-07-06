@@ -1,15 +1,25 @@
 import $ from 'jquery';
 import { TimelineMax } from 'gsap/all';
 import { CountUp } from 'countup.js';
+import Sound from 'react-sound';
+import soundfile from '../../../../Assets/audio/chapterOne/part-one-1.mp3';
 
 export const ChapterOnePartOneScript = (inView) => {
   if (inView) {
     const html = document.querySelector('html');
     const container = $('.part--one');
     let containerOffsetLeft = container.offset().left;
+    const partOne = document.querySelector('.part--one');
+
+    let audio = new Audio(soundfile);
+    audio.play();
 
     // Block Scroll for the first part
-    html.style.overflow = 'hidden';
+    if (partOne.hasAttribute('animation')) {
+      html.style.overflow = 'unset';
+    } else {
+      html.style.overflow = 'hidden';
+    }
 
     window.scrollTo({
       left: containerOffsetLeft,
@@ -22,13 +32,25 @@ export const ChapterOnePartOneScript = (inView) => {
       const illustrationchapterOnePartOne = document.querySelector(
         '.illustrationchapterOnePartOne'
       );
-      const woman = document.querySelector('.woman');
-      const man = document.querySelector('.man');
-      const flask = document.querySelector('.flask');
-      const flower = document.querySelector('.flower');
-      const money = document.querySelector('.money');
-      const bank = document.querySelector('.bank');
-      const bubbles = document.querySelectorAll('.bubble');
+      const woman = document.querySelector(
+        '.illustrationchapterOnePartOne .woman'
+      );
+      const man = document.querySelector('.illustrationchapterOnePartOne .man');
+      const flask = document.querySelector(
+        '.illustrationchapterOnePartOne .flask'
+      );
+      const flower = document.querySelector(
+        '.illustrationchapterOnePartOne .flower'
+      );
+      const money = document.querySelector(
+        '.illustrationchapterOnePartOne .money'
+      );
+      const bank = document.querySelector(
+        '.illustrationchapterOnePartOne .bank'
+      );
+      const bubbles = document.querySelectorAll(
+        '.illustrationchapterOnePartOne .bubble'
+      );
       const numbers = document.querySelector('.numbers');
       const counterSecondLabel = document.querySelector(
         '.number--second .label'
@@ -39,6 +61,7 @@ export const ChapterOnePartOneScript = (inView) => {
 
       // Init TimelineMax
       let tl = new TimelineMax({});
+
       // Start Animation
       tl.to(bank, 2.5, { opacity: 1 }); // Apparition du coffre
       tl.to(flask, 2, { opacity: 1 }, 0); // Apparition de la tache gradient
@@ -87,12 +110,16 @@ export const ChapterOnePartOneScript = (inView) => {
       }); // Apparition du label 'transactions/jour'
       tl.set('html', { overflow: 'unset' }); // Réactive l'overflow
 
+      tl.set(container, { attr: { animation: 'is-animated' } });
+
       iconReplay.addEventListener('click', function () {
         window.scrollTo({
           left: containerOffsetLeft,
           behavior: 'smooth',
         });
+
         tl.kill();
+
         setTimeout(() => {
           tl.progress(0, false);
           document.querySelector('html').style.overflow = 'hidden';

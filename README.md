@@ -25,6 +25,7 @@ https://webdoc-blockchain.herokuapp.com/
   <li>React Slick (https://react-slick.neostack.com/)</li>
   <li>React-animated-burgers (https://www.npmjs.com/package/react-animated-burgers)</li>
   <li>Styled-components for React-animated-burgers (https://www.npmjs.com/package/styled-components)</li>
+  <li>React-intersection-observer (https://www.npmjs.com/package/react-intersection-observer)</li>
 
 #### BACK-END
 
