@@ -1,11 +1,16 @@
 .chapter-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
   &__flaque {
     position: absolute;
     z-index: -1;
   }
 
   &__container {
-    padding: 2.5rem 3.75rem 0 2.5rem; // 40px 60px 0 40px
+    padding: 2.5rem 5.625rem 0 2.5rem; // 40px 90px 0 40px
     display: flex;
     flex-direction: row;
     justify-content: start;

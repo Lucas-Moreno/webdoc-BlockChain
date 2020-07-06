@@ -11,7 +11,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="item item--two">
-          <Link to="/doc">
+          <Link to="/chapitre-un">
             <button className="button button--primary">
               Commencer l'expérience
             </button>

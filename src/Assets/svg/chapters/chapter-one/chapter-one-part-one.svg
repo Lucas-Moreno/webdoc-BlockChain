@@ -1,21 +1,4 @@
-import React from 'react';
-import { InView } from 'react-intersection-observer';
-import { ChapterOnePartOneScript } from './ChapterOnePartOne.js';
-
-const ChapterOnePartOne = () => {
-  return (
-    <InView
-      as="div"
-      threshold={0.25}
-      onChange={(inView, entry) => ChapterOnePartOneScript(inView)}
-    >
-      <div className="part part--one part--first">
-        <div className="contents">
-          <span
-            className="illustrationchapterOnePartOne"
-            dangerouslySetInnerHTML={{
-              __html: `
-              <svg id="illustrationchapterOnePartOne" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="822" height="650" viewBox="0 0 822 650">
+<svg id="illustrationchapterOnePartOne" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="822" height="650" viewBox="0 0 822 650">
   <defs>
     <style>
       .hidden {
@@ -355,23 +338,3 @@ const ChapterOnePartOne = () => {
     <path class="cls-43" d="M717,500.38l9-192" transform="translate(0 -0.38)"/>
   </g>
 </svg>
-              `,
-            }}
-          />
-          <div className="numbers">
-            <div className="number number--second">
-              <span id="second" className="counter"></span>
-              <span className="label">Transactions/Seconde</span>
-            </div>
-            <div className="number number--day">
-              <span id="day" className="counter"></span>
-              <span className="label">Transactions/Jour</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </InView>
-  );
-};
-
-export default ChapterOnePartOne;
