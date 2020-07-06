@@ -5,7 +5,7 @@ import ChapterMenu from '../ChapterMenu/ChapterMenu';
 
 const ChapterHeader = () => {
   return (
-    <div className="chapter-header">
+    <header className="chapter-header">
       <div
         className="chapter-header__flaque"
         dangerouslySetInnerHTML={{
@@ -34,7 +34,7 @@ const ChapterHeader = () => {
           <ChapterMenu />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

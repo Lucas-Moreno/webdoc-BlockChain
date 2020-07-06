@@ -17,12 +17,14 @@ https://webdoc-blockchain.herokuapp.com/
 
 #### NPM PACKAGES
 
-  <li>node-sass (https://www.npmjs.com/package/node-sass?activeTab=versions)</li>
-  <li>breakpoint-sass (http://breakpoint-sass.com/)</li>
-  <li>gsap animation (https://greensock.com/gsap/)</li>
-  <li>intersection-observer (https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API)</li>
-  <li>countup.js (https://inorganik.github.io/countUp.js/)</li>
+  <li>Node-sass (https://www.npmjs.com/package/node-sass?activeTab=versions)</li>
+  <li>Breakpoint-sass (http://breakpoint-sass.com/)</li>
+  <li>Gsap animation (https://greensock.com/gsap/)</li>
+  <li>ScrollMagic Gsap (https://greensock.com/scrollmagic/)</li>
+  <li>Countup.js (https://inorganik.github.io/countUp.js/)</li>
   <li>React Slick (https://react-slick.neostack.com/)</li>
+  <li>React-animated-burgers (https://www.npmjs.com/package/react-animated-burgers)</li>
+  <li>Styled-components for React-animated-burgers (https://www.npmjs.com/package/styled-components)</li>
 
 #### BACK-END
 

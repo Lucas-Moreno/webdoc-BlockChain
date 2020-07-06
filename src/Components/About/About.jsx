@@ -5,6 +5,7 @@ import Credits from "./Credits/Credits";
 import Remerciements from "./Remerciements/Remerciements";
 import BackArrow from "../../Assets/images/back-arrow.png";
 import { Link } from "react-router-dom";
+import IconSound from '../Icons/IconSound.jsx';
 
 const About = () => {
   const [active, setActive] = useState("disclaimer");
@@ -32,7 +33,7 @@ const About = () => {
                 <ol className="list">
                   {lis.map((li, index) => (
                     <li
-                      className={`item ${active === li ? "active" : null}`}
+                      className={`item ${active === li ? 'active' : null}`}
                       onClick={() => setActive(li)}
                     >
                       {chapter[index]}
@@ -40,13 +41,16 @@ const About = () => {
                   ))}
                 </ol>
               </nav>
-              {active === "disclaimer" ? <Disclaimers /> : null}
-              {active === "informations" ? <Information /> : null}
-              {active === "credit" ? <Credits /> : null}
-              {active === "remerciement" ? <Remerciements /> : null}
+              {active === 'disclaimer' ? <Disclaimers /> : null}
+              {active === 'informations' ? <Information /> : null}
+              {active === 'credit' ? <Credits /> : null}
+              {active === 'remerciement' ? <Remerciements /> : null}
             </div>
           </div>
         </div>
+      </div>
+      <div className="icons">
+        <IconSound />
       </div>
     </div>
   );
