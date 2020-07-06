@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContentAbout from "./ContentAbout/ContentAbout";
 import BackArrow from "../../Assets/images/back-arrow.png";
 import { Link } from "react-router-dom";
+import IconSound from "../Icons/IconSound.jsx";
 
 const About = () => {
   const [active, setActive] = useState("disclaimer");
@@ -89,6 +90,9 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="icons">
+        <IconSound />
       </div>
     </div>
   );

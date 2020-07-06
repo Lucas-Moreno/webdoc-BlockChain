@@ -3,7 +3,7 @@ import Chapitre from "./Chapter/Chapter";
 import Logo from "../../Assets/images/logo.png";
 import BackArrow from "../../Assets/images/back-arrow.png";
 import { Link } from "react-router-dom";
-
+import IconSound from "../Icons/IconSound";
 const Summary = () => {
   const [active, setActive] = useState("chapterOne");
   const lis = ["chapterOne", "chapterTwo", "chapterThree"];
@@ -86,6 +86,9 @@ const Summary = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="icons">
+        <IconSound />
       </div>
     </div>
   );

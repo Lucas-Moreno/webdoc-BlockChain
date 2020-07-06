@@ -2,6 +2,14 @@
   position: relative;
   z-index: 1;
 
+  &__burger,
+  &__sound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__burger {
     width: 100px;
     height: 100px;
@@ -11,10 +19,6 @@
   }
 
   &__sound {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     bottom: -50px;
     right: -25px;

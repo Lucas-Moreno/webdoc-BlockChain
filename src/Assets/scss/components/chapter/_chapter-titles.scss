@@ -23,5 +23,6 @@ $container-subtitle-font-sizes: (
     @include font-size($container-subtitle-font-sizes);
     color: v(blue-color);
     margin-left: 6.5625rem; // 105px
+    line-height: 0.4;
   }
 }
