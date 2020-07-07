@@ -3,7 +3,7 @@ import Sound from "react-sound";
 import soundfile from "../../Assets/audio/son-home.mp3";
 
 const IconSound = () => {
-  const [swapSound, setSwapSound] = useState(Sound.status.PLAYING);
+  const [swapSound, setSwapSound] = useState(Sound.status.STOPPED);
 
   const toggle = () => {
     if (swapSound === Sound.status.PLAYING) {

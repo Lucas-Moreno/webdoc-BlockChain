@@ -1,32 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContentAbout from "./ContentAbout/ContentAbout";
 import BackArrow from "../../Assets/images/back-arrow.png";
 import { Link } from "react-router-dom";
 import IconSound from "../Icons/IconSound.jsx";
+import axios from "axios";
 
 const About = () => {
   const [active, setActive] = useState("disclaimer");
   const lis = ["disclaimer", "informations", "credit", "remerciement"];
   const chapter = ["Disclaimer", "Informations", "Credits", "Remerciements"];
 
-  const objList = {
-    disclaimer: [
-      "disclaimer",
-      "Ce site a été réalisé à des fins pédagogiques dans le cadre du cursus Bachelor de l’école HETIC. Les contenus présentés n'ont pas fait l'objet d'une demande de droit d'utilisation. Ce site ne sera en aucun cas exploité à des fins commerciales et ne sera pas publié"
-    ],
-    informations: [
-      "informations",
-      "Vous êtes mal voyant ou mal entendant ? Notre web documentaire est sous-titrés, accompagné d’une explication oral et comporte des animations illustrant nos propos."
-    ],
-    credits: [
-      "crédits",
-      "Réalisé par : MAXIME BARLET - LUCAS MORENO - JEREMY SCHIAPPAPIETRE - LUCAS CUNAULT - REMI TIAB"
-    ],
-    remerciement: [
-      "remerciements",
-      "Au terme de ce travail, nous tenons à exprimer notre profonde gratitude à nos professeurs et intervenants encadrant pour leur suivi et leur énorme soutien, qu’ils n’ont cessé de nous prodiguer tout au long de la période du projet. Le projet effectué était pour nous un réel challenge dû à son interactivités qui demandait créativité et immersions. Nous sommes très fiers de notre projet final et espérons qu’il vous plaira tout autant."
-    ]
-  };
+  const url = `https://api-blockchain-backend.herokuapp.com/api/articles`;
+  const [contents, setContents] = useState("");
+
+  const [id, setId] = useState(4);
+
+  useEffect(() => {
+    axios
+      .get(`https://api-blockchain-backend.herokuapp.com/api/articles/${id}`)
+      .then(res => {
+        setContents(res.data);
+      })
+      .catch(err => {});
+  }, [id, url]);
 
   return (
     <div className="about__container">
@@ -50,38 +46,41 @@ const About = () => {
                   {lis.map((li, index) => (
                     <li
                       className={`item ${active === li ? "active" : null}`}
-                      onClick={() => setActive(li)}
+                      onClick={() => {
+                        setActive(li);
+                        setId(index + 4);
+                      }}
                     >
                       {chapter[index]}
                     </li>
                   ))}
                 </ol>
               </nav>
-              {Object.keys(objList).map((obj, index) => {
+              {Object.keys(contents).map((content, index) => {
                 return (
                   <div className="about__contents">
                     {index === 0 && active === "disclaimer" ? (
                       <ContentAbout
-                        title={objList.disclaimer[0]}
-                        text={objList.disclaimer[1]}
+                        title={contents.nameChapter}
+                        text={contents.contentChapter}
                       />
                     ) : null}
                     {index === 1 && active === "informations" ? (
                       <ContentAbout
-                        title={objList.informations[0]}
-                        text={objList.informations[1]}
+                        title={contents.nameChapter}
+                        text={contents.contentChapter}
                       />
                     ) : null}
                     {index === 2 && active === "credit" ? (
                       <ContentAbout
-                        title={objList.credits[0]}
-                        text={objList.credits[1]}
+                        title={contents.nameChapter}
+                        text={contents.contentChapter}
                       />
                     ) : null}
                     {index === 3 && active === "remerciement" ? (
                       <ContentAbout
-                        title={objList.remerciement[0]}
-                        text={objList.remerciement[1]}
+                        title={contents.nameChapter}
+                        text={contents.contentChapter}
                       />
                     ) : null}
                   </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import rightArrow from "../../../Assets/images/right-arrow.png";
 import Illustration from "../../../Assets/images/disclaimerImg.png";
 import { Link } from "react-router-dom";
