@@ -1,21 +1,4 @@
-import React from 'react';
-import { InView } from 'react-intersection-observer';
-import { ChapterOnePartThreeScript } from './ChapterOnePartThree.js';
-
-const ChapterOnePartThree = () => {
-  return (
-    <InView
-      as="div"
-      threshold={0.25}
-      onChange={(inView, entry) => ChapterOnePartThreeScript(inView)}
-    >
-      <div className="part part--three">
-        <div className="contents">
-          <span
-            className="illustrationchapterOnePartThree"
-            dangerouslySetInnerHTML={{
-              __html: `
-              <svg id="illustrationchapterOnePartThree" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1825.26 554.09">
+<svg id="illustrationchapterOnePartThree" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1825.26 554.09">
   <defs>
     <style>
       .hidden {
@@ -398,13 +381,3 @@ const ChapterOnePartThree = () => {
     <path id="validate-3" data-name="validate" class="validate hidden cls-39" d="M1411,608.73,1424.36,622,1450,596.6l-3.68-3.6-22,21.75-9.72-9.64Z" transform="translate(-9.81 -209)"/>
   </g>
 </svg>
-              `,
-            }}
-          />
-        </div>
-      </div>
-    </InView>
-  );
-};
-
-export default ChapterOnePartThree;

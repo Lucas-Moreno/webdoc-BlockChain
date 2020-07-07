@@ -7,6 +7,7 @@ import ChapterOnePartOne from './ChapterParts/ChapterOnePartOne.jsx';
 import ChapterOnePartTwo from './ChapterParts/ChapterOnePartTwo.jsx';
 import ChapterOnePartThree from './ChapterParts/ChapterOnePartThree.jsx';
 import ChapterOnePartFour from './ChapterParts/ChapterOnePartFour.jsx';
+import ChapterOnePartFive from './ChapterParts/ChapterOnePartFive.jsx';
 
 const ChapterOne = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const ChapterOne = () => {
         <ChapterOnePartTwo />
         <ChapterOnePartThree />
         <ChapterOnePartFour />
+        <ChapterOnePartFive />
       </div>
       <div className="icons">
         <IconSkip />

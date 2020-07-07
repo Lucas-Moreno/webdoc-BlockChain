@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import { TimelineMax } from 'gsap/all';
 import { CountUp } from 'countup.js';
-import Sound from 'react-sound';
-import soundfile from '../../../../Assets/audio/chapterOne/part-one-1.mp3';
+import soundOne from '../../../../Assets/audio/chapterOne/part-one-1.mp3';
+import soundTwo from '../../../../Assets/audio/chapterOne/part-one-2.mp3';
 
 export const ChapterOnePartOneScript = (inView) => {
   if (inView) {
@@ -10,9 +10,6 @@ export const ChapterOnePartOneScript = (inView) => {
     const container = $('.part--one');
     let containerOffsetLeft = container.offset().left;
     const partOne = document.querySelector('.part--one');
-
-    let audio = new Audio(soundfile);
-    audio.play();
 
     // Block Scroll for the first part
     if (partOne.hasAttribute('animation')) {
@@ -59,15 +56,33 @@ export const ChapterOnePartOneScript = (inView) => {
       const iconReplay = document.querySelector('.icon--replay');
       const iconSkip = document.querySelector('.icon--skip');
 
+      /* Sounds Manager */
+      // Chapter One Part One Sound One
+      let audioplaySoundOne = document.createElement('audio');
+      audioplaySoundOne.setAttribute('src', soundOne);
+
+      const launchAudioplaySoundOne = (_) => {
+        audioplaySoundOne.play();
+      };
+
+      // Chapter One Part One Sound Two
+      let audioplaySoundTwo = document.createElement('audio');
+      audioplaySoundTwo.setAttribute('src', soundTwo);
+
+      const launchAudioplaySoundTwo = (_) => {
+        audioplaySoundTwo.play();
+      };
+
       // Init TimelineMax
       let tl = new TimelineMax({});
 
       // Start Animation
-      tl.to(bank, 2.5, { opacity: 1 }); // Apparition du coffre
-      tl.to(flask, 2, { opacity: 1 }, 0); // Apparition de la tache gradient
-      tl.to(woman, 1.5, { opacity: 1 }, 1.5); // Apparition de la femme
-      tl.to(man, 1.5, { opacity: 1 }, 2); // Apparition de l'homme
-      tl.to(flower, 1.5, { opacity: 1 }, 2); // Apparition de la fleur
+      tl.call(launchAudioplaySoundOne);
+      tl.to(flask, 2, { opacity: 1 }, 0.5); // Apparition de la tache gradient
+      tl.to(bank, 2, { opacity: 1 }, 2); // Apparition du coffre
+      tl.to(woman, 2, { opacity: 1 }, 8); // Apparition de la femme
+      tl.to(man, 2, { opacity: 1 }, 9); // Apparition de l'homme
+      tl.to(flower, 1.5, { opacity: 1 }, 9); // Apparition de la fleur
 
       for (let i = 0; i < bubbles.length; i++) {
         let bubble = bubbles[i];
@@ -84,6 +99,10 @@ export const ChapterOnePartOneScript = (inView) => {
       }
 
       tl.to(money, 1.5, { opacity: 1, x: 30 }); // Apparition et décalage à droit des billets
+
+      tl.call(launchAudioplaySoundTwo);
+
+      tl.set({}, {}, '+=2'); // Add Delay
 
       tl.to(illustrationchapterOnePartOne, 1.5, { x: -300, scale: 0.9 }); // Décalage du SVG à gauche et rétrécissement
 
@@ -104,13 +123,16 @@ export const ChapterOnePartOneScript = (inView) => {
       tl.to(counterSecondLabel, 2, {
         opacity: 1,
       }); // Apparition du label 'transactions/seconde'
+      tl.set({}, {}, '+=2'); // Add Delay
       tl.call(counterDay); // Launch counter day
       tl.to(counterDayLabel, 2, {
         opacity: 1,
       }); // Apparition du label 'transactions/jour'
       tl.set('html', { overflow: 'unset' }); // Réactive l'overflow
 
-      tl.set(container, { attr: { animation: 'is-animated' } });
+      tl.set(container, {
+        attr: { animation: 'is-animated' },
+      });
 
       iconReplay.addEventListener('click', function () {
         window.scrollTo({

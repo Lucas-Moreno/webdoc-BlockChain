@@ -1,0 +1,105 @@
+$next-chapter-title-font-sizes: (
+  null: 4rem /* 64px */,
+);
+
+$next-chapter-subtitle-font-sizes: (
+  null: 2.25rem /* 36px */,
+);
+
+$next-chapter-text-font-sizes: (
+  null: 1.125rem /* 18px */,
+);
+
+$next-chapter-buttons-font-sizes: (
+  null: 0.875rem /* 14px */,
+);
+
+.contents__next-chapter {
+  margin-left: 17vw;
+
+  .next-chapter {
+    &__title {
+      @include font-size($next-chapter-title-font-sizes);
+      color: v(white-color);
+      font-weight: 900;
+      margin-bottom: 1.5rem; // 24px
+    }
+
+    &__subtitle {
+      @include font-size($next-chapter-subtitle-font-sizes);
+      color: v(blue-color);
+      font-weight: 600;
+      margin-bottom: 0.5rem; // 8px
+    }
+
+    &__text {
+      @include font-size($next-chapter-text-font-sizes);
+      color: v(white-color);
+      font-weight: 500;
+      margin-bottom: 2.875rem; // 46px
+      max-width: 411px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      .button {
+        @include font-size($next-chapter-buttons-font-sizes);
+        width: 207px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: v(black-custom-color);
+        font-weight: 600;
+        position: relative;
+        cursor: pointer;
+
+        &--quiz {
+          background-color: v(white-color);
+          margin-right: 14px;
+
+          &::after,
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 1em solid;
+            right: -1em;
+          }
+
+          &::after {
+            z-index: 2;
+            border-left-color: v(white-color);
+          }
+        }
+        &--next {
+          background-color: v(yellow-color);
+
+          &::after,
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 1em solid;
+            left: 0;
+          }
+
+          &::after {
+            z-index: 2;
+            border-left-color: v(blue-dark-color);
+          }
+        }
+      }
+    }
+  }
+}
