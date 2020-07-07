@@ -16,13 +16,14 @@ $numbers-label-font-sizes: (
   display: flex;
   flex-direction: row;
   justify-content: start;
+  overflow-y: hidden;
 
   .part {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 
     &--first {
@@ -78,6 +79,41 @@ $numbers-label-font-sizes: (
           margin-top: 0.625rem; // 10px
           opacity: 0;
         }
+      }
+    }
+
+    &--two {
+      .contents {
+        margin-bottom: 3.125rem; // 50px
+      }
+    }
+
+    &--three {
+      .contents {
+        margin-bottom: 9.375rem; // 150px
+        padding: 0 1.875rem; // 0 30px
+      }
+    }
+
+    &--four {
+      .contents {
+        margin-bottom: 0.9375rem; // 15px
+      }
+    }
+
+    &--five {
+      justify-content: center;
+      align-items: flex-start;
+
+      .contents {
+        position: relative;
+        z-index: 10;
+      }
+
+      .contents__background-element {
+        position: absolute;
+        top: 0;
+        right: -50px;
       }
     }
   }
