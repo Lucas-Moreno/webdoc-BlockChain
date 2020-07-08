@@ -1,7 +1,8 @@
-import React from 'react';
-import { InView } from 'react-intersection-observer';
-import backgroundElement from '../../../../Assets/images/background-element-chapter-one-part-five.png';
-import { ChapterOnePartFiveScript } from './ChapterOnePartFive.js';
+import React from "react";
+import { InView } from "react-intersection-observer";
+import backgroundElement from "../../../../Assets/images/background-element-chapter-one-part-five.png";
+import { ChapterOnePartFiveScript } from "./ChapterOnePartFive.js";
+import { Link } from "react-router-dom";
 
 const ChapterOnePartFive = () => {
   return (
@@ -24,7 +25,9 @@ const ChapterOnePartFive = () => {
                 rôles majeurs joués par la blockchain !
               </p>
               <div className="next-chapter__buttons">
-                <div className="button button--quiz">Faite le Quiz</div>
+                <Link to="/quizz">
+                  <div className="button button--quiz">Faite le Quiz</div>
+                </Link>
                 <div className="button button--next">Prochainement ...</div>
               </div>
             </div>
