@@ -1,31 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Chapitre from "./Chapter/Chapter";
-import Logo from "../../Assets/images/logo.png";
 import BackArrow from "../../Assets/images/back-arrow.png";
 import { Link } from "react-router-dom";
 import IconSound from "../Icons/IconSound";
+import axios from "axios";
+
 const Summary = () => {
   const [active, setActive] = useState("chapterOne");
   const lis = ["chapterOne", "chapterTwo", "chapterThree"];
   const chapter = ["Chapitre 1", "Chapitre 2", "Chapitre 3", "Chapitre 4"];
 
-  const objList = {
-    chapterOne: [
-      "Les failles d’un système",
-      "Il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain. ",
-      "Voir le chapitre 1"
-    ],
-    chapterTwo: [
-      "Chapitre 2",
-      "Il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain. ",
-      "Voir le chapitre 2"
-    ],
-    chapterThree: [
-      "Chapitre 3",
-      "Il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain. ",
-      "Voir le chapitre 3"
-    ]
-  };
+  const url = `https://api-blockchain-backend.herokuapp.com/api/articles`;
+  const [contents, setContents] = useState("");
+
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    axios
+      .get(`https://api-blockchain-backend.herokuapp.com/api/articles/${id}`)
+      .then(res => {
+        setContents(res.data);
+      })
+      .catch(err => {});
+  }, [id, url]);
 
   return (
     <div className="summary__container">
@@ -49,35 +46,41 @@ const Summary = () => {
                   {lis.map((li, index) => (
                     <li
                       className={`item ${active === li ? "active" : null}`}
-                      onClick={() => setActive(li)}
+                      onClick={() => {
+                        setActive(li);
+                        setId(index + 1);
+                      }}
                     >
                       {chapter[index]}
                     </li>
                   ))}
                 </ol>
               </nav>
-              {Object.keys(objList).map((obj, index) => {
+              {Object.keys(contents).map((content, index) => {
                 return (
                   <div className="summary__contents">
                     {index === 0 && active === "chapterOne" ? (
                       <Chapitre
-                        title={objList.chapterOne[0]}
-                        text={objList.chapterOne[1]}
-                        button={objList.chapterOne[2]}
+                        title={contents.titleChapter}
+                        text={contents.contentChapter}
+                        button={contents.textButtonChapter}
+                        path="chapitre-un"
                       />
                     ) : null}
                     {index === 1 && active === "chapterTwo" ? (
                       <Chapitre
-                        title={objList.chapterTwo[0]}
-                        text={objList.chapterTwo[1]}
-                        button={objList.chapterTwo[2]}
+                        title={contents.titleChapter}
+                        text={contents.contentChapter}
+                        button={contents.textButtonChapter}
+                        path="chapitre-deux"
                       />
                     ) : null}
                     {index === 2 && active === "chapterThree" ? (
                       <Chapitre
-                        title={objList.chapterThree[0]}
-                        text={objList.chapterThree[1]}
-                        button={objList.chapterThree[2]}
+                        title={contents.titleChapter}
+                        text={contents.contentChapter}
+                        button={contents.textButtonChapter}
+                        path="chapitre-trois"
                       />
                     ) : null}
                   </div>
