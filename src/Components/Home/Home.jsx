@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { homeAnimations } from './Home';
-import SliderHome from './SliderHome/SliderHome';
-import Slider from 'react-slick';
-import HomeAnimation from './Animation/Animation.jsx';
-import Scroll from './Scroll/Scroll.jsx';
-import axios from 'axios';
+import React, { useEffect } from "react";
+import { homeAnimations } from "./Home";
+import SliderHome from "./SliderHome/SliderHome";
+import Slider from "react-slick";
+import HomeAnimation from "./Animation/Animation.jsx";
+import Scroll from "./Scroll/Scroll.jsx";
 
 const Home = () => {
   // Settings Carousel
@@ -18,18 +17,9 @@ const Home = () => {
     adaptiveHeight: true,
   };
 
-  const url = 'https://api-blockchain-backend.herokuapp.com/api/homes';
-  const [contents, setContents] = useState('');
-
   useEffect(() => {
     homeAnimations();
-    axios
-      .get(url)
-      .then((res) => {
-        setContents(res.data['hydra:member']);
-      })
-      .catch((err) => {});
-  }, [contents]);
+  });
 
   return (
     <div className="wrapper wrapper--home">
@@ -38,15 +28,22 @@ const Home = () => {
           <div className="home__carousel">
             <h1 className="slide__title">BlockChain</h1>
             <Slider {...settings}>
-              {Object.keys(contents).map((text, index) => {
-                return (
-                  <SliderHome
-                    key={index}
-                    title={contents[index].subTitle}
-                    text={contents[index].content}
-                  />
-                );
-              })}
+              <SliderHome
+                title="cryptomonnaies"
+                text="il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain."
+              />
+              <SliderHome
+                title="TECHNOLOGIES"
+                text="il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain."
+              />
+              <SliderHome
+                title="ÉCHANGES"
+                text="il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain."
+              />
+              <SliderHome
+                title="RÉVOLUTION"
+                text="il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain."
+              />
             </Slider>
           </div>
           <div className="home__illustration">

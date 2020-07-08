@@ -1,25 +1,9 @@
-import React, { useState, useEffect } from "react";
-import soundfile from "../../Assets/audio/son-home.mp3";
-import Sound, { soundManager } from "react-sound";
+import React from "react";
+
 const IconSound = () => {
-  const [swapSound, setSwapSound] = useState(Sound.status.STOPPED);
-
-  useEffect(() => {
-    window.soundManager.setup({ debugMode: false });
-  });
-
-  const toggle = () => {
-    if (swapSound === Sound.status.PLAYING) {
-      setSwapSound(Sound.status.STOPPED);
-    } else {
-      setSwapSound(Sound.status.PLAYING);
-    }
-  };
-
   return (
     <div className="icon icon--sound" title="Modifier le son">
-      <Sound url={soundfile} playStatus={swapSound} loop={true} />
-      <div className="contents" onClick={toggle}>
+      <div className="contents">
         <span
           dangerouslySetInnerHTML={{
             __html: `<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
