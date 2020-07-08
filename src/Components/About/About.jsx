@@ -1,27 +1,38 @@
-import React, { useState, useEffect } from "react";
-import ContentAbout from "./ContentAbout/ContentAbout";
-import BackArrow from "../../Assets/images/back-arrow.png";
-import { Link } from "react-router-dom";
-import IconSound from "../Icons/IconSound.jsx";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import ContentAbout from './ContentAbout/ContentAbout';
+import BackArrow from '../../Assets/images/back-arrow.png';
+import { Link } from 'react-router-dom';
+import IconSound from '../Icons/IconSound.jsx';
+import axios from 'axios';
+import soundAbout from '../../Assets/audio/sound-about.mp3';
+import Sound from 'react-sound';
+import { InView } from 'react-intersection-observer';
 
 const About = () => {
-  const [active, setActive] = useState("disclaimer");
-  const lis = ["disclaimer", "informations", "credit", "remerciement"];
-  const chapter = ["Disclaimer", "Informations", "Credits", "Remerciements"];
+  const [active, setActive] = useState('disclaimer');
+  const lis = ['disclaimer', 'informations', 'credit', 'remerciement'];
+  const chapter = ['Disclaimer', 'Informations', 'Credits', 'Remerciements'];
 
   const url = `https://api-blockchain-backend.herokuapp.com/api/articles`;
-  const [contents, setContents] = useState("");
+  const [contents, setContents] = useState('');
 
   const [id, setId] = useState(4);
 
+  const [swapSound, setSwapSound] = useState(Sound.status.STOPPED);
+  const launchSoundIntroduction = (inView) => {
+    if (inView) {
+      setSwapSound(Sound.status.PLAYING);
+    }
+  };
+
   useEffect(() => {
+    window.soundManager.setup({ debugMode: false });
     axios
       .get(`https://api-blockchain-backend.herokuapp.com/api/articles/${id}`)
-      .then(res => {
+      .then((res) => {
         setContents(res.data);
       })
-      .catch(err => {});
+      .catch((err) => {});
   }, [id, url]);
 
   return (
@@ -45,7 +56,7 @@ const About = () => {
                 <ol className="list">
                   {lis.map((li, index) => (
                     <li
-                      className={`item ${active === li ? "active" : null}`}
+                      className={`item ${active === li ? 'active' : null}`}
                       onClick={() => {
                         setActive(li);
                         setId(index + 4);
@@ -59,25 +70,25 @@ const About = () => {
               {Object.keys(contents).map((content, index) => {
                 return (
                   <div className="about__contents">
-                    {index === 0 && active === "disclaimer" ? (
+                    {index === 0 && active === 'disclaimer' ? (
                       <ContentAbout
                         title={contents.nameChapter}
                         text={contents.contentChapter}
                       />
                     ) : null}
-                    {index === 1 && active === "informations" ? (
+                    {index === 1 && active === 'informations' ? (
                       <ContentAbout
                         title={contents.nameChapter}
                         text={contents.contentChapter}
                       />
                     ) : null}
-                    {index === 2 && active === "credit" ? (
+                    {index === 2 && active === 'credit' ? (
                       <ContentAbout
                         title={contents.nameChapter}
                         text={contents.contentChapter}
                       />
                     ) : null}
-                    {index === 3 && active === "remerciement" ? (
+                    {index === 3 && active === 'remerciement' ? (
                       <ContentAbout
                         title={contents.nameChapter}
                         text={contents.contentChapter}
