@@ -144,6 +144,10 @@ $summary-launch-text-font-sizes: (
           justify-content: center;
           align-items: center;
 
+          &.disable {
+            opacity: 0.7;
+          }
+
           .launch {
             display: flex;
             flex-direction: row;
@@ -159,6 +163,10 @@ $summary-launch-text-font-sizes: (
             &__arrow {
               width: 24px;
               height: 17px;
+
+              &.disable {
+                display: none;
+              }
             }
           }
         }
