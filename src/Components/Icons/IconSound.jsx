@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import Sound from "react-sound";
+import React, { useState, useEffect } from "react";
 import soundfile from "../../Assets/audio/son-home.mp3";
-
+import Sound, { soundManager } from "react-sound";
 const IconSound = () => {
   const [swapSound, setSwapSound] = useState(Sound.status.STOPPED);
+
+  useEffect(() => {
+    window.soundManager.setup({ debugMode: false });
+  });
 
   const toggle = () => {
     if (swapSound === Sound.status.PLAYING) {
