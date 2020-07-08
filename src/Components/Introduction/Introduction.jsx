@@ -30,7 +30,6 @@ const Introduction = () => {
         onChange={(inView, entry) => launchSoundIntroduction(inView)}
       >
         <Sound
-          className="sound-toto"
           url={soundIntroduction}
           playStatus={swapSound}
           loop={true}
