@@ -109,7 +109,7 @@ const ContentAbout = (props) => {
           <br></br>
           <br></br>
           Car sans elle, ce projet n'aurait jamais vu le jour:
-          <span className="bold">HETIC</span>.
+          <span className="bold"> HETIC</span>.
         </div>
       );
     }
