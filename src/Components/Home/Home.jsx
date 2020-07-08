@@ -14,7 +14,7 @@ const Home = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
   };
 
   useEffect(() => {
@@ -46,7 +46,6 @@ const Home = () => {
               />
             </Slider>
           </div>
-
           <div className="home__illustration">
             <HomeAnimation />
           </div>
