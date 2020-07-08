@@ -64,6 +64,7 @@ const Summary = () => {
                         title={contents.titleChapter}
                         text={contents.contentChapter}
                         button={contents.textButtonChapter}
+                        path="chapitre-un"
                       />
                     ) : null}
                     {index === 1 && active === "chapterTwo" ? (
@@ -71,6 +72,7 @@ const Summary = () => {
                         title={contents.titleChapter}
                         text={contents.contentChapter}
                         button={contents.textButtonChapter}
+                        path="chapitre-deux"
                       />
                     ) : null}
                     {index === 2 && active === "chapterThree" ? (
@@ -78,6 +80,7 @@ const Summary = () => {
                         title={contents.titleChapter}
                         text={contents.contentChapter}
                         button={contents.textButtonChapter}
+                        path="chapitre-trois"
                       />
                     ) : null}
                   </div>

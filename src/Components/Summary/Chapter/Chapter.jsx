@@ -13,7 +13,7 @@ const Chapter = props => {
         <h1 className="content__title">{props.title}</h1>
         <div className="content__text">{props.text}</div>
         <div className="content__launch">
-          <Link to="/chapitre-un">
+          <Link to={props.path}>
             <div className="launch">
               <span className="launch__text">{props.button}</span>
               <img className="launch__arrow" src={rightArrow} alt="" />
