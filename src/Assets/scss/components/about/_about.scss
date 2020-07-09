@@ -1,13 +1,17 @@
 $about-title-font-sizes: (
-  null: 6rem /* 96px */
+  null: 6rem /* 96px */,
 );
 
 $about-navigation-item-font-sizes: (
-  null: 1.125rem /* 18px */
+  null: 1.125rem /* 18px */,
 );
 
 $about-content-title-font-sizes: (
-  null: 2.25rem /* 36px */
+  null: 2.25rem /* 36px */,
+);
+
+$about-content-subtitle-font-sizes: (
+  null: 1.75rem /* 28px */,
 );
 
 .about__container {
@@ -23,9 +27,9 @@ $about-content-title-font-sizes: (
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0 $main-gap;
     grid-template-areas:
-      "back back . title title title title title title . . ."
-      "nav nav nav nav nav nav nav nav nav nav nav nav"
-      "contents contents contents contents contents contents contents contents contents contents contents contents";
+      'back back . title title title title title title . . .'
+      'nav nav nav nav nav nav nav nav nav nav nav nav'
+      'contents contents contents contents contents contents contents contents contents contents contents contents';
 
     &__back {
       grid-area: back;
@@ -95,6 +99,7 @@ $about-content-title-font-sizes: (
       grid-area: contents;
       display: flex;
       flex-direction: row;
+      width: 100%;
 
       .illustration {
         display: block;
@@ -114,6 +119,8 @@ $about-content-title-font-sizes: (
         margin-left: 3.125rem; // 50px
         max-height: 350px;
         overflow: auto;
+        z-index: 1000;
+        width: 100%;
 
         &__title {
           @include font-size($about-content-title-font-sizes);
@@ -123,7 +130,18 @@ $about-content-title-font-sizes: (
           margin-bottom: 1.25rem; // 20px
         }
 
-        p {
+        &__subtitle {
+          @include font-size($about-content-subtitle-font-sizes);
+          font-family: $hackney-font-stack;
+          text-transform: uppercase;
+          margin-bottom: 0.9375rem; // 15px
+        }
+
+        &__introduction {
+          font-weight: 700;
+        }
+
+        div {
           margin-bottom: 0.9375rem; // 15px
         }
       }

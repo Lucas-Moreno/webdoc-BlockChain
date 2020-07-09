@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Chapters } from '../Chapters';
 import ChapterHeader from '../ChapterHeader/ChapterHeader';
+import ChapterNavigation from '../ChapterNavigation/ChapterNavigation';
 import IconReplay from '../../Icons/IconReplay.jsx';
 import IconSkip from '../../Icons/IconSkip.jsx';
 import ChapterOnePartOne from './ChapterParts/ChapterOnePartOne.jsx';
@@ -16,6 +17,7 @@ const ChapterOne = () => {
 
   return (
     <div className="chapter chapter--one">
+      <ChapterNavigation />
       <ChapterHeader />
       <div className="parts">
         <ChapterOnePartOne />

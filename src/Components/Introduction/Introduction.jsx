@@ -18,6 +18,17 @@ const Introduction = () => {
     }
   };
 
+  function setSound() {
+    const soundLine = document.querySelector('.sound-line');
+    if (swapSound === 'PLAYING') {
+      setSwapSound(Sound.status.PAUSED);
+      soundLine.style.opacity = 0;
+    } else {
+      setSwapSound(Sound.status.PLAYING);
+      soundLine.style.opacity = 1;
+    }
+  }
+
   useEffect(() => {
     window.soundManager.setup({ debugMode: false });
   });
@@ -30,11 +41,11 @@ const Introduction = () => {
         onChange={(inView, entry) => launchSoundIntroduction(inView)}
       >
         <Sound
-          className="sound-toto"
           url={soundIntroduction}
           playStatus={swapSound}
           loop={true}
           autoLoad={true}
+          volume={50}
         />
         <div className="container">
           <div className="contents">
@@ -49,7 +60,9 @@ const Introduction = () => {
         <div className="icons">
           <IconSkip />
           <IconReplay />
-          <IconSound />
+          <div onClick={setSound}>
+            <IconSound />
+          </div>
         </div>
       </InView>
     </div>

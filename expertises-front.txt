@@ -1,0 +1,25 @@
+﻿L’usage de ReactJS n’est pas dû au hasard, en effet, pour l’organisation générale de nos fichiers et la structuration du projet, le fait de pouvoir séparer chaque composant, et pouvoir les réutiliser facilement est un réel atout. ReactJS produit du code simple à lire, ce qui facilite la maintenabilité du code et également le travail collaboratif. Au coeur de notre projet, ReactJS est couplé avec webpack permettant ainsi l’utilisation de Sass, de Babel, et également du gestionnaire package Npm.
+
+
+Sass nous permet d’améliorer notre productivité (utilisation des variables, mixins, fonctions,...).
+
+
+Babel nous permet de convertir l’ES6 en ES5, améliorant la compatibilité de nos différents navigateurs.
+
+
+Nous utilisons Npm afin d’importer des librairies, ce qui nous évite de devoir développer des fonctionnalités. Nous choisissons des librairies légères afin de ne pas impacter les performances de notre site. 
+
+
+Le projet à débuté avec une approche desktop-first, car dans le cas d’un web-documentaire, où l’immersion de l’utilisateur est primordiale, il est plus intéressant de profiter de ce contenu sur un écran de grande taille.
+
+
+Le choix de transformer notre site en PWA est intéressant pour plusieurs raisons. Dans un premier temps, l’utilisateur peut accèder au web-documentaire directement, sans avoir à le chercher à nouveau sur internet. Ensuite, grâce aux serviceWorker, le web-documentaire sera consultable hors-ligne, ce qui est pratique lorsque l’on veut consulter le site, mais qu’une connexion n’est pas disponible. l'utilisateur peut etre averti par les notifications des chapitres à venir.
+
+
+Ce web-documentaire étant en grande partie composé d’animation, plusieurs packages Npm sont nécessaires.
+Countup.js: permet d’animer les chiffres clés sous forme de compteur.
+Gsap: permet la gestion des animations, ce package comprend également ScrollMagic.js qui nous permet de cibler l'entrée d'éléments dans le viewport afin de déclencher des animations ou effectuer certaines actions.
+Breakpoint-sass: permet d’organiser ses medias queries de manière simple et optimisée.
+React-slick: permet la gestion d’un carrousel.
+React-animated-burger: facilite la gestion d’un menu burger.
+React-intersection-observer: permet la détection d’entrée d’éléments dans le viewport, optimisé pour ReactJS, avec la détection de scroll horizontal.
