@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../../../Assets/images/logo.png';
+import { Link } from 'react-router-dom';
 import ChapterTitles from '../ChapterTitles/ChapterTitles';
 import ChapterMenu from '../ChapterMenu/ChapterMenu';
 
@@ -24,9 +25,11 @@ const ChapterHeader = () => {
         }}
       ></div>
       <div className="chapter-header__container">
-        <div className="container__logo">
-          <img src={Logo} alt="Logo" />
-        </div>
+        <Link to="/">
+          <div className="container__logo">
+            <img src={Logo} alt="Logo" />
+          </div>
+        </Link>
         <div className="container__titles">
           <ChapterTitles />
         </div>

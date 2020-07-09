@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { homeAnimations } from "./Home";
-import SliderHome from "./SliderHome/SliderHome";
-import Slider from "react-slick";
-import HomeAnimation from "./Animation/Animation.jsx";
-import Scroll from "./Scroll/Scroll.jsx";
+import React, { useEffect } from 'react';
+import { homeAnimations } from './Home';
+import SliderHome from './SliderHome/SliderHome';
+import Slider from 'react-slick';
+import HomeAnimation from './Animation/Animation.jsx';
+import Scroll from './Scroll/Scroll.jsx';
 
 const Home = () => {
   // Settings Carousel
@@ -30,19 +30,22 @@ const Home = () => {
             <Slider {...settings}>
               <SliderHome
                 title="cryptomonnaies"
-                text="il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain."
+                text="Les cryptomonnaies, et notamment le Bitcoin, ont été le premier support
+        d’application de la blockchain. Des monnaies propulsées par un projet,
+        décentralisées, dont le cours ne dépend pas du marché, mais bien des
+        acteurs porteurs du projet."
               />
               <SliderHome
                 title="TECHNOLOGIES"
-                text="il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain."
+                text="Fût un temps, l’Homme créait le téléphone, dans le but de faciliter la communication, puis ce fût le tour d’internet, qui à changé notre façon de vivre et également celle de percevoir notre monde. Aujourd’hui, la blockchain est sur le point de bouleverser à nouveau notre façon de vivre."
               />
               <SliderHome
                 title="ÉCHANGES"
-                text="il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain."
+                text="Depuis l’aube de l’humanité, l’Homme a toujours effectué des échanges, comme le troc, puis les pièces de divers métaux sont devenues la norme, et aujourd’hui, nous pouvons échanger de l’argent avec nos cartes bancaires, nos téléphones. À cette époque, il devient difficile de connaitre la provenance de l'argent, la blockchain permet une total transparence et une tracabilité sur les échanges que nous effectuons."
               />
               <SliderHome
                 title="RÉVOLUTION"
-                text="il est temps d'identifier et de hiérarchiser les différents domaines d'intérêt dans les organisations publiques et privées qui peuvent bénéficier de la technologie de la blockchain et éduquer le marché sur le potentiel de la blockchain."
+                text="Le jour où la blockchain ne sera plus un sujet d'interrogation, de fantasme du darknet, mais bien la norme, notre société s’en verra profondément modifiée. Les questions que l’on peut se poser aujourd’hui, sur la réelle provenance d’un steak haché ou encore de certains médicaments, si l’assurance va rapidement vous verser une indemnité lors d'un préjudice ou d'un incident, ne seront plus qu’un lointain souvenir."
               />
             </Slider>
           </div>
