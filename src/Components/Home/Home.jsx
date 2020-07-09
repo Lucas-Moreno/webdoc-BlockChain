@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { homeAnimations } from './Home';
-import SliderHome from './SliderHome/SliderHome';
-import Slider from 'react-slick';
-import HomeAnimation from './Animation/Animation.jsx';
-import Scroll from './Scroll/Scroll.jsx';
+import React, { useEffect } from "react";
+import { homeAnimations } from "./Home";
+import SliderHome from "./SliderHome/SliderHome";
+import Slider from "react-slick";
+import HomeAnimation from "./Animation/Animation.jsx";
+import Scroll from "./Scroll/Scroll.jsx";
 
 const Home = () => {
   // Settings Carousel
@@ -14,7 +14,7 @@ const Home = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true,
+    adaptiveHeight: true
   };
 
   useEffect(() => {
@@ -37,15 +37,15 @@ const Home = () => {
               />
               <SliderHome
                 title="TECHNOLOGIES"
-                text="Fût un temps, l’Homme créait le téléphone, dans le but de faciliter la communication, puis ce fût le tour d’internet, qui à changé notre façon de vivre et également celle de percevoir notre monde. Aujourd’hui, la blockchain est sur le point de bouleverser à nouveau notre façon de vivre."
+                text="Fût un temps, l’Homme créait le téléphone, pour communiquer plus facilement, puis ce fût le tour d’internet, qui a changé notre façon de vivre et de voir le monde. Aujourd’hui, la blockchain est sur le point de bouleverser à nouveau notre façon de vivre."
               />
               <SliderHome
                 title="ÉCHANGES"
-                text="Depuis l’aube de l’humanité, l’Homme a toujours effectué des échanges, comme le troc, puis les pièces de divers métaux sont devenues la norme, et aujourd’hui, nous pouvons échanger de l’argent avec nos cartes bancaires, nos téléphones. À cette époque, il devient difficile de connaitre la provenance de l'argent, la blockchain permet une total transparence et une tracabilité sur les échanges que nous effectuons."
+                text="Depuis l’aube de l’humanité, l’Homme a toujours effectué des échanges, avec le troc, puis l'échange de pièces de divers métaux, et aujourd’hui, nous pouvons échanger de l’argent avec nos cartes bancaires, nos téléphones. À cette époque, où il devient difficile de savoir d’où vient l’argent, la blockchain permet une transparence à 100% sur les échanges que nous effectuons."
               />
               <SliderHome
                 title="RÉVOLUTION"
-                text="Le jour où la blockchain ne sera plus un sujet d'interrogation, de fantasme du darknet, mais bien la norme, notre société s’en verra profondément modifiée. Les questions que l’on peut se poser aujourd’hui, sur la réelle provenance d’un steak haché ou encore de certains médicaments, si l’assurance va rapidement vous verser une indemnité lors d'un préjudice ou d'un incident, ne seront plus qu’un lointain souvenir."
+                text="Le jour où la blockchain ne sera plus un sujet d'interrogation, de fantasme du DarkNet, mais bien la norme, notre société s’en verra profondément modifiée. Les questions que l’on peut se poser aujourd’hui, sur la provenance réelle d’un steak haché par exemple, ou bien si l’assurance va rapidement vous verser une indemnité après avoir été inondé, ne seront plus qu’un lointain souvenir."
               />
             </Slider>
           </div>
