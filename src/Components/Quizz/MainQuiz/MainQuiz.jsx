@@ -1,6 +1,5 @@
 import React from "react";
 import { quizData } from "./quizData";
-import "./MainQuiz.scss";
 import { Link } from "react-router-dom";
 
 class MainQuiz extends React.Component {
@@ -106,8 +105,8 @@ class MainQuiz extends React.Component {
           <div className="container__quizz">
             <h1 className="title">Questionnaire</h1>
             <h1 className="question">{this.state.questions} </h1>
-            <span className="current_question">{`Questions ${currentQuestion} sur ${quizData.length -
-              1} restantes `}</span>
+            <span className="current_question">{`Questions ${currentQuestion +
+              1} sur ${quizData.length} restantes `}</span>
             <div className="container__messages">
               {options.map((option, index) => (
                 <div className="container__message">
