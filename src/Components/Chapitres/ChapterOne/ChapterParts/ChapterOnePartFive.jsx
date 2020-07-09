@@ -1,8 +1,8 @@
-import React from "react";
-import { InView } from "react-intersection-observer";
-import backgroundElement from "../../../../Assets/images/background-element-chapter-one-part-five.png";
-import { ChapterOnePartFiveScript } from "./ChapterOnePartFive.js";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { InView } from 'react-intersection-observer';
+import backgroundElement from '../../../../Assets/images/background-element-chapter-one-part-five.png';
+import { ChapterOnePartFiveScript } from './ChapterOnePartFive.js';
+import MainQuiz from '../../ChapterQuiz/ChapterOne/Quiz.jsx';
 
 const ChapterOnePartFive = () => {
   return (
@@ -15,6 +15,9 @@ const ChapterOnePartFive = () => {
         <div className="contents__background-element">
           <img src={backgroundElement} alt="" />
         </div>
+        <div className="container-quiz">
+          <MainQuiz />
+        </div>
         <div className="contents">
           <div className="contents__next-chapter">
             <div className="next-chapter">
@@ -25,10 +28,15 @@ const ChapterOnePartFive = () => {
                 rôles majeurs joués par la blockchain !
               </p>
               <div className="next-chapter__buttons">
-                <Link to="/quizz">
-                  <div className="button button--quiz">Faite le Quiz</div>
-                </Link>
-                <div className="button button--next">Prochainement ...</div>
+                <div className="button button--quiz" title="Faite le Quiz">
+                  Faite le Quiz
+                </div>
+                <div
+                  className="button button--next"
+                  title="Prochainement le Chapitre 2"
+                >
+                  Prochainement ...
+                </div>
               </div>
             </div>
           </div>

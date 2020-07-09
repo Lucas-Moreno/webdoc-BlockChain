@@ -72,8 +72,6 @@ export const ChapterOnePartFourScript = (inView) => {
       const iconReplay = document.querySelector('.icon--replay');
       const iconSkip = document.querySelector('.icon--skip');
 
-      console.log(bubblesText);
-
       /* Sounds Manager */
       // Chapter One Part Four Sound One
       let audioplaySoundOne = document.createElement('audio');

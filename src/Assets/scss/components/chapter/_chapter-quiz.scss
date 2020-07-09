@@ -1,63 +1,104 @@
-.quizz {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+$quiz-title-sizes: (
+  null: 4rem /* 64px */,
+);
+
+$quiz-questions-sizes: (
+  null: 1.125rem /* 18px */,
+);
+
+$quiz-buttons-sizes: (
+  null: 0.875rem /* 14px */,
+);
+
+.container-quiz {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  z-index: 100;
+  transition: all 1s ease;
+
+  &.is-open {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .quizz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
 }
+
 .container__quizz {
-  background-color: white;
+  background-color: v(white-color);
   padding: 3rem 5rem;
+  position: relative;
+  margin-top: 160px;
 }
+
 .result__container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
+
 .result {
-  margin-top: 20px;
-  background: white;
+  margin-top: 1.25rem; // 20px
+  background: v(white-color);
   padding: 3rem;
+  position: relative;
 }
+
 .result__game {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .good__answer {
   margin-bottom: 2rem;
 }
+
 li.ui.floating.message.options {
   margin-bottom: 1rem;
-  background: #186fe1;
-  color: white;
+  background: v(blue-color);
+  color: v(white-color);
 }
 .container__result {
   text-align: center;
 }
-.title {
+.quizz__title {
   margin: 1rem 0rem 2rem 0rem;
-  font-family: Hackney;
+  font-family: $hackney-font-stack;
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
+  @include font-size($quiz-title-sizes);
   line-height: 77px;
-  color: #186fe1;
+  color: v(blue-color);
 }
-.question {
+.quizz__question {
   margin-bottom: 3rem;
-  font-family: Montserrat;
+  font-family: $main-font-stack;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  @include font-size($quiz-questions-sizes);
   line-height: 22px;
 }
 .current_question {
   margin-bottom: 2rem;
-  font-family: Montserrat;
+  font-family: $main-font-stack;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  @include font-size($quiz-questions-sizes);
   line-height: 22px;
 }
 .container__messages {
@@ -72,10 +113,10 @@ li.ui.floating.message.options {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Montserrat;
+  font-family: $main-font-stack;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  @include font-size($quiz-questions-sizes);
   line-height: 22px;
 }
 .container__button {
@@ -83,36 +124,36 @@ li.ui.floating.message.options {
   justify-content: center;
 }
 .index {
-  margin-right: 10px;
-  background: black;
-  color: white;
-  padding: 5px 10px;
+  margin-right: 0.625rem;
+  background: v(black-color);
+  color: v(white-color);
+  padding: 0.3125rem 0.625rem; // 5px 10px
 }
 
 .options {
   cursor: pointer;
-  padding: 10px;
+  padding: 0.625rem; // 10px
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .selected {
-  background: #186fe1 !important;
+  background: v(blue-color) !important;
 }
 
 ul {
   list-style-type: none;
 }
 button.ui.inverted.button {
-  background-color: #186fe1;
-  padding: 10px 30px;
+  background-color: v(blue-color);
+  padding: 0.625rem 1.875rem; // 10px 30px
   border: none;
-  color: white;
-  font-family: Montserrat;
+  color: v(white-color);
+  font-family: $main-font-stack;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  @include font-size($quiz-buttons-sizes);
   line-height: 17px;
   text-align: center;
 }
@@ -122,15 +163,25 @@ button.ui.inverted.button {
 }
 .buttonOne {
   cursor: pointer;
-  background: black;
+  background: v(black-color);
   margin-top: 2rem;
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem; // 10px 30px
   border: none;
-  color: white;
-  font-family: Montserrat;
+  color: v(blue-color);
+  font-family: $main-font-stack;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  @include font-size($quiz-buttons-sizes);
   line-height: 17px;
   text-align: center;
+}
+
+.quiz__close {
+  font-family: $hackney-font-stack;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 46px;
+  cursor: pointer;
+  z-index: 1000;
 }

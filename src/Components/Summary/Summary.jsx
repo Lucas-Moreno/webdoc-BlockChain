@@ -80,6 +80,7 @@ const Summary = () => {
                   <ol className="list">
                     {lis.map((li, index) => (
                       <li
+                        key={index}
                         className={`item ${active === li ? 'active' : null}`}
                         onClick={() => {
                           setActive(li);
@@ -93,7 +94,7 @@ const Summary = () => {
                 </nav>
                 {Object.keys(contents).map((content, index) => {
                   return (
-                    <div className="summary__contents">
+                    <div key={index}  className="summary__contents">
                       {index === 0 && active === 'chapterOne' ? (
                         <Chapitre
                           title={contents.titleChapter}
