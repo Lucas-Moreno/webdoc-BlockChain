@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../../Assets/images/logo.png'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -8,9 +9,11 @@ const Header = () => {
         <span className="text">Block</span>
         <span className="text">Chain</span>
       </div>
-      <div className="header__logo">
-        <img src={Logo} alt="Logo" />
-      </div>
+      <Link to="/">
+        <div className="header__logo">
+          <img src={Logo} alt="Logo" />
+        </div>
+      </Link>
     </header>
   );
 };

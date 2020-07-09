@@ -38,6 +38,7 @@ const About = () => {
 
   useEffect(() => {
     window.soundManager.setup({ debugMode: false });
+
     axios
       .get(`https://api-blockchain-backend.herokuapp.com/api/articles/${id}`)
       .then((res) => {
