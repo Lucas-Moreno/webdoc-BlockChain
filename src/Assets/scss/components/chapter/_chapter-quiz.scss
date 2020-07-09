@@ -1,0 +1,136 @@
+.quizz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container__quizz {
+  background-color: white;
+  padding: 3rem 5rem;
+}
+.result__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result {
+  margin-top: 20px;
+  background: white;
+  padding: 3rem;
+}
+.result__game {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.good__answer {
+  margin-bottom: 2rem;
+}
+li.ui.floating.message.options {
+  margin-bottom: 1rem;
+  background: #186fe1;
+  color: white;
+}
+.container__result {
+  text-align: center;
+}
+.title {
+  margin: 1rem 0rem 2rem 0rem;
+  font-family: Hackney;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 77px;
+  color: #186fe1;
+}
+.question {
+  margin-bottom: 3rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.current_question {
+  margin-bottom: 2rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.container__messages {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.container__message {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.container__button {
+  display: flex;
+  justify-content: center;
+}
+.index {
+  margin-right: 10px;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+}
+
+.options {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background: #186fe1 !important;
+}
+
+ul {
+  list-style-type: none;
+}
+button.ui.inverted.button {
+  background-color: #186fe1;
+  padding: 10px 30px;
+  border: none;
+  color: white;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+.container__buttonOne {
+  display: flex;
+  justify-content: center;
+}
+.buttonOne {
+  cursor: pointer;
+  background: black;
+  margin-top: 2rem;
+  padding: 10px 30px;
+  border: none;
+  color: white;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
