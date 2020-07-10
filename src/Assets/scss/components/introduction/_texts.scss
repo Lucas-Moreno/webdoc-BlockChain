@@ -11,7 +11,7 @@ $questions-font-sizes: (
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: $hackney-font-stack;
+  font-family: $hackney-font-stack !important;
   color: v(white-color);
   text-transform: uppercase;
   margin-bottom: 4.6875rem; // 75px

@@ -1,6 +1,5 @@
-import React from "react";
-import { quizData } from "./quizData";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Quiz } from './Quiz.js';
 
 class MainQuiz extends React.Component {
   state = {
@@ -9,15 +8,15 @@ class MainQuiz extends React.Component {
     options: [],
     score: 0,
     disabled: true,
-    isEnd: false
+    isEnd: false,
   };
 
   loadQuizData = () => {
     this.setState(() => {
       return {
-        questions: quizData[this.state.currentQuestion].question,
-        answer: quizData[this.state.currentQuestion].answer,
-        options: quizData[this.state.currentQuestion].options
+        questions: Quiz[this.state.currentQuestion].question,
+        answer: Quiz[this.state.currentQuestion].answer,
+        options: Quiz[this.state.currentQuestion].options,
       };
     });
   };
@@ -25,18 +24,23 @@ class MainQuiz extends React.Component {
   componentDidMount() {
     this.loadQuizData();
   }
+
+  closeQuiz = (_) => {
+    const containerQuiz = document.querySelector('.container-quiz');
+    containerQuiz.classList.remove('is-open');
+  };
+
   nextQuestionHandler = () => {
-    // console.log('test')
     const { myAnswer, answer, score } = this.state;
 
     if (myAnswer === answer) {
       this.setState({
-        score: score + 1
+        score: score + 1,
       });
     }
 
     this.setState({
-      currentQuestion: this.state.currentQuestion + 1
+      currentQuestion: this.state.currentQuestion + 1,
     });
     console.log(this.state.currentQuestion);
   };
@@ -46,26 +50,26 @@ class MainQuiz extends React.Component {
       this.setState(() => {
         return {
           disabled: true,
-          questions: quizData[this.state.currentQuestion].question,
-          options: quizData[this.state.currentQuestion].options,
-          answer: quizData[this.state.currentQuestion].answer
+          questions: Quiz[this.state.currentQuestion].question,
+          options: Quiz[this.state.currentQuestion].options,
+          answer: Quiz[this.state.currentQuestion].answer,
         };
       });
     }
   }
   //check answer
-  checkAnswer = answer => {
+  checkAnswer = (answer) => {
     this.setState({ myAnswer: answer, disabled: false });
   };
   finishHandler = () => {
-    if (this.state.currentQuestion === quizData.length - 1) {
+    if (this.state.currentQuestion === Quiz.length - 1) {
       this.setState({
-        isEnd: true
+        isEnd: true,
       });
     }
     if (this.state.myAnswer === this.state.answer) {
       this.setState({
-        score: this.state.score + 1
+        score: this.state.score + 1,
       });
     }
   };
@@ -74,27 +78,28 @@ class MainQuiz extends React.Component {
 
     if (isEnd) {
       return (
-        <div class="result__container">
+        <div className="result__container">
           <div className="result">
+            <div className="quiz__close">X</div>
             <h3 className="result__game">
-              Votre score est de {this.state.score}/4 points{" "}
+              Votre score est de {this.state.score}/4 points{' '}
             </h3>
             <div className="container__result">
               <p className="good__answer">
                 La bonne réponse aux questions était
               </p>
               <ul>
-                {quizData.map((item, index) => (
-                  <li className="ui floating message options" key={index}>
+                {Quiz.map((item, index) => (
+                  <li key={index} className="ui floating message options">
                     {item.answer}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="container__buttonOne">
-              <Link to="/">
-                <button className="buttonOne">Retourner au menu</button>
-              </Link>
+              <button onClick={() => this.closeQuiz()} className="buttonOne">
+                Retourner au chapitre
+              </button>
             </div>
           </div>
         </div>
@@ -103,28 +108,30 @@ class MainQuiz extends React.Component {
       return (
         <div className="quizz">
           <div className="container__quizz">
-            <h1 className="title">Questionnaire</h1>
-            <h1 className="question">{this.state.questions} </h1>
-            <span className="current_question">{`Questions ${currentQuestion +
-              1} sur ${quizData.length} restantes `}</span>
+            <div className="quiz__close">X</div>
+            <h1 className="quizz__title">Questionnaire</h1>
+            <h1 className="quizz__question">{this.state.questions} </h1>
+            <span className="current_question">{`Questions ${
+              currentQuestion + 1
+            } sur ${Quiz.length} restantes `}</span>
             <div className="container__messages">
               {options.map((option, index) => (
-                <div className="container__message">
-                  <p
+                <div key={index} className="container__message">
+                  <span
                     key={option.id}
                     className={`ui floating message options
-                    ${myAnswer === option ? "selected" : null}
+                    ${myAnswer === option ? 'selected' : null}
                     `}
                     onClick={() => this.checkAnswer(option)}
                   >
-                    <p className="index">{index + 1}</p>
-                    <p>{option}</p>
-                  </p>
+                    <span className="index">{index + 1}</span>
+                    <span>{option}</span>
+                  </span>
                 </div>
               ))}
             </div>
             <div className="container__button">
-              {currentQuestion < quizData.length - 1 && (
+              {currentQuestion < Quiz.length - 1 && (
                 <button
                   className="ui inverted button"
                   disabled={this.state.disabled}
@@ -134,7 +141,7 @@ class MainQuiz extends React.Component {
                 </button>
               )}
               {/* //adding a finish button */}
-              {currentQuestion === quizData.length - 1 && (
+              {currentQuestion === Quiz.length - 1 && (
                 <button
                   className="ui inverted button"
                   onClick={this.finishHandler}

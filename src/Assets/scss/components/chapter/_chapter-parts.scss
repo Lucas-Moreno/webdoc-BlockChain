@@ -38,6 +38,7 @@ $numbers-label-font-sizes: (
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      position: relative;
     }
 
     &--one {
@@ -113,7 +114,7 @@ $numbers-label-font-sizes: (
       .contents__background-element {
         position: absolute;
         top: 0;
-        right: -50px;
+        right: 0;
       }
     }
   }

@@ -1,0 +1,42 @@
+.progression {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: v(turquoise-color);
+    cursor: pointer;
+    transition: all 1s ease;
+
+    .step {
+      color: v(yellow-color);
+      font-family: $hackney-font-stack;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    &.is-active {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+
+      .step {
+        font-size: 40px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

@@ -34,8 +34,18 @@ https://webdoc-blockchain.herokuapp.com/
 
 #### FEATURES
 
+  <li>Compatibilité all browsers</li>
+  <li>Responsive Tablet & Mobile</li>
+  <li>Gestion du retour Sommaire & À propos vers la Navigation (fin de l'introduction)</li>
+  <li>Optimiser les déclenchements des sons et des timelines d'animations avec wait for final events</li>
+  <li>Update les buttons de progressions dans les Chapitres</li>
+  <li>Gestion des animations au resize de l'écran ou au reload/refresh de la page</li>
+  <li>Chapitre 2</li>
+  <li>Chapitre 3</li>
+  <li>Add Bouton recommencez le Quiz</li>
+  <li>Chapitre sous-titrés pour les malentendants</li>
   <li>Contenus en FRANCAIS/ANGLAIS</li>
-  <li>PWA - Offline</li>
+  <li>PWA - Offline - Notifications Push pour informer les Updates/MaJ et les nouveaux Chapitres</li>
 
 ### INSTALLATION
 

@@ -6,7 +6,6 @@ import App from "./App/App";
 import About from "./Components/About/About";
 import Summary from "./Components/Summary/Summary";
 import ChapterOne from "./Components/Chapitres/ChapterOne/ChapterOne";
-import MainQuizz from "./Components/Quizz/MainQuiz/MainQuiz";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -20,7 +19,6 @@ const Root = () => (
       <Route exact path="/a-propos" component={About}></Route>
       <Route exact path="/sommaire" component={Summary}></Route>
       <Route exact path="/chapitre-un" component={ChapterOne}></Route>
-      <Route exact path="/quizz" component={MainQuizz}></Route>
     </Switch>
   </BrowserRouter>
 );

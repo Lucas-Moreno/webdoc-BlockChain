@@ -2,7 +2,8 @@ import React from 'react';
 import Logo from '../../../Assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import ChapterTitles from '../ChapterTitles/ChapterTitles';
-import ChapterMenu from '../ChapterMenu/ChapterMenu';
+import ChapterMenu from '../ChapterMenu/ChapterMenu.jsx';
+import ChapterProgression from '../ChapterProgression/ChapterProgression.jsx';
 
 const ChapterHeader = () => {
   return (
@@ -32,6 +33,9 @@ const ChapterHeader = () => {
         </Link>
         <div className="container__titles">
           <ChapterTitles />
+        </div>
+        <div className="container__progression">
+          <ChapterProgression />
         </div>
         <div className="container__menu">
           <ChapterMenu />

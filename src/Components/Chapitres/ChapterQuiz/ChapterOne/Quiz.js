@@ -1,4 +1,4 @@
-export const quizData = [
+export const Quiz = [
   {
     id: 0,
     question: `Combien enregistre le réseau de carte de paiement Visa par seconde ?`,
