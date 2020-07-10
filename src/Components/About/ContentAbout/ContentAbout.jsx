@@ -1,5 +1,8 @@
 import React from 'react';
-import Illustration from '../../../Assets/images/creditsImg.png';
+import Credits from '../../../Assets/images/illustration-credits.png';
+import Disclaimer from '../../../Assets/images/illustration-disclaimer.png';
+import Informations from '../../../Assets/images/illustration-informations.png';
+import Remerciements from '../../../Assets/images/illustration-remerciements.png';
 
 const ContentAbout = (props) => {
   const addContents = (_) => {
@@ -114,11 +117,20 @@ const ContentAbout = (props) => {
       );
     }
   };
+  const getIllustration = (_) => {
+    if (props.title === 'INFORMATIONS') {
+      return <img src={Informations} alt="" />;
+    } else if (props.title === 'CREDITS') {
+      return <img src={Credits} alt="" />;
+    } else if (props.title === 'REMERCIEMENTS') {
+      return <img src={Remerciements} alt="" />;
+    } else if (props.title === 'DISCLAIMER') {
+      return <img src={Disclaimer} alt="" />;
+    }
+  };
   return (
     <div className="about__contents">
-      <div className="illustration">
-        <img src={Illustration} alt="" />
-      </div>
+      <div className="illustration">{getIllustration()}</div>
       <div className="content">
         <h1 className="content__title">{props.title}</h1>
         {addContents()}
