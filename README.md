@@ -3,7 +3,7 @@
 Ce projet est un Web-documentaire.
 Découvrez une nouvelle technologie innovante, la Blockchain.
 
-https://webdoc-blockchain.herokuapp.com/
+https://blockchain-webdoc.herokuapp.com/
 
 ## STACK
 
